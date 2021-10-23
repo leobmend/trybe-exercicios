@@ -4,7 +4,7 @@
 
 1. Utilizando o terminal, aplique o comando de criação de diretórios que você aprendeu, crie um diretório chamado unix_tests e navegue até ele.
 
-`cd ~/Documents/trybe/trybe-exercises/module-01-web-dev-foundations/block-01-unix-and-bash/day-01
+`cd ~/Documents/trybe/trybe-exercises/module-01-web-dev-foundations/block-01-unix-and-bash/day-01`
 `mkdir unix-tests`
 `cd unix-tests
 
