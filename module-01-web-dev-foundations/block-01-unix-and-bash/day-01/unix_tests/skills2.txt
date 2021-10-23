@@ -1,8 +1,0 @@
-Internet
-Unix
-Bash
-SQL
-NoSQL
-Python
-C#
-Java
