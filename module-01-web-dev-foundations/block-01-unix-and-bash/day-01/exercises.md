@@ -1,4 +1,4 @@
-# ** EXERCíCIOS**
+# *EXERCíCIOS*
 
 ## **Parte 1**
 
