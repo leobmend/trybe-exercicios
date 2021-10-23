@@ -8,7 +8,7 @@ cd unix-tests`
 
 2. Crie um arquivo de texto com o nome trybe.txt.
 
-`touch trybe.txt`
+```touch trybe.txt```
 
 3. Crie uma cópia do arquivo trybe.txt com nome trybe_backup.txt.
 
