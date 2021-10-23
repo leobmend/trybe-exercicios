@@ -1,4 +1,4 @@
-# Trybe - Course Exercices
+# Trybe - Course Exercises
 
 ## What is Trybe?
 
@@ -6,7 +6,7 @@ Trybe is a technology school that uses active learning as model to prepare their
 
 > https://www.betrybe.com/
 
-## What I am learning?
+## What am I learning?
 
 The course is divided into four modules.
 * Module 01 - Web Development Foundations   
@@ -15,3 +15,6 @@ The course is divided into four modules.
 * Module 03 - Back-end (under construction)
 * Module 04 - Computer Science (under construction)
 
+## This space
+
+This repository is meant to keep all exercises done throughout the course, organizing and categorizing them. Therefore, this space could be a good place to future consults.
