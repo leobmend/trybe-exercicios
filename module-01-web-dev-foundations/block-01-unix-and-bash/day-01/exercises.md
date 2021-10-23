@@ -20,7 +20,7 @@ Dentro de unix_tests , crie um novo diretório chamado backup .
 Mova o arquivo trybe_backup.txt para o diretório backup .
 Dentro de unix_tests , crie um novo diretório chamado backup2 .
 Mova o arquivo trybe_backup.txt da pasta backup para a pasta backup2 .
-Apague a pasta backup .
+Apague a pasta backup ..
 
 
 
