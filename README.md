@@ -17,4 +17,4 @@ The course is divided into four modules.
 
 ## This space
 
-This repository is meant to keep all exercises done throughout the course, organizing and categorizing them. Therefore, this space could be a good place to future consults.
+This repository is meant to keep all exercises done throughout the course, organizing and categorizing them. Therefore, this space could be a good place to fast and/or consistent future consults.
