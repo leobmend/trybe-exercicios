@@ -6,11 +6,11 @@
 
 `cd ~/Documents/trybe/trybe-exercises/module-01-web-dev-foundations/block-01-unix-and-bash/day-01`
 `mkdir unix-tests`
-`cd unix-tests
+`cd unix-tests`
 
 2. Crie um arquivo de texto com o nome trybe.txt.
 
-`touch trybe.txt
+`touch trybe.txt`
 
 3. Crie uma cópia do arquivo trybe.txt com nome trybe_backup.txt.
 
@@ -18,27 +18,27 @@
 
 4. Renomeie o arquivo trybe.txt.
 
-`mv trybe.txt new-trybe.txt
+`mv trybe.txt new-trybe.txt`
 
 5. Dentro de unix_tests, crie um novo diretório chamado backup.
 
-`mkdir backup
+`mkdir backup`
 
 6. Mova o arquivo trybe_backup.txt para o diretório backup .
 
-`mv trybe_backup.txt backup 
+`mv trybe_backup.txt backup`
 
 7. Dentro de unix_tests, crie um novo diretório chamado backup2.
 
-`mkdir backup2
+`mkdir backup2`
 
 8. Mova o arquivo trybe_backup.txt da pasta backup para a pasta backup2.
 
-`mv backup/trybe_backup.txt backup2 
+`mv backup/trybe_backup.txt backup2`
 
 9. Apague a pasta backup.
 
-`rmdir backup
+`rmdir backup`
 
 
 
