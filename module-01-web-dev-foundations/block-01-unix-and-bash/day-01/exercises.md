@@ -83,6 +83,8 @@ SQL<br/>
 
 `rm *.txt`
 
+-
+
 ## **Parte 2**
 
 1. Na pasta unix_tests , baixe um arquivo com os nomes de todos os países do mundo utilizando o comando curl:
