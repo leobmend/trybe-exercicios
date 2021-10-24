@@ -54,12 +54,15 @@
 
 12. Apague o diretório backup.
 
+`rm -rf backup`
+
 13. Limpe o terminal.
+
+`clear`
 
 Obs.: Para os exercícios 14 e 15, crie, de forma manual na parte gráfica do seu sistema operacional (através do mouse), um arquivo de texto com o conteúdo abaixo, chamado skills.txt :
 
-> Copiar<br/>
-Internet<br/>
+> Internet<br/>
 Unix<br/>
 Bash<br/>
 HTML<br/>
@@ -70,10 +73,12 @@ SQL<br/>
 
 14. Mostre na tela as 5 primeiras skills do arquivo skills.txt.
 
-
+`head -5 skills.txt`
 
 15. Mostre na tela as 4 últimas skills do arquivo skills.txt.
 
-
+`tail -4 skills.txt`
 
 16. Apague todos os arquivos que terminem em .txt.
+
+`rm *.txt`
