@@ -58,15 +58,15 @@
 
 Obs.: Para os exercícios 14 e 15, crie, de forma manual na parte gráfica do seu sistema operacional (através do mouse), um arquivo de texto com o conteúdo abaixo, chamado skills.txt :
 
-> Copiar <br/>
-Internet <br/>
-Unix <br/>
-Bash
-HTML
-CSS
-JavaScript
-React
-SQL
+> Copiar<br/>
+Internet<br/>
+Unix<br/>
+Bash<br/>
+HTML<br/>
+CSS<br/>
+JavaScript<br/>
+React<br/>
+SQL<br/>
 
 14. Mostre na tela as 5 primeiras skills do arquivo skills.txt.
 
