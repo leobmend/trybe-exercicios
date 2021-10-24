@@ -49,23 +49,24 @@
 11. Veja qual o path completo do diretório atual e liste todos os arquivos dentro dele.
 
 `pwd`
-`# /home/leonardo/Documents/trybe/trybe-exercises/module-01-web-dev-foundations/block-01-unix-and-bash/day-01/unix-tests`
 
+`# /home/leonardo/Documents/trybe/trybe-exercises/module-01-web-dev-foundations/block-01-unix-and-bash/day-01/unix-tests`
 
 12. Apague o diretório backup.
 
 13. Limpe o terminal.
 
 Obs.: Para os exercícios 14 e 15, crie, de forma manual na parte gráfica do seu sistema operacional (através do mouse), um arquivo de texto com o conteúdo abaixo, chamado skills.txt :
-`Copiar`
-`Internet`
-`Unix`
-`Bash`
-`HTML`
-`CSS`
-`JavaScript`
-`React`
-`SQL`
+
+> Copiar
+Internet
+Unix
+Bash
+HTML
+CSS
+JavaScript
+React
+SQL
 
 14. Mostre na tela as 5 primeiras skills do arquivo skills.txt.
 
