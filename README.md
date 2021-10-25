@@ -2,7 +2,7 @@
 
 ## What is Trybe?
 
-Trybe is a technology school that uses active learning as model to prepare their students to face all kinds of real life market challenges. Their course trains not only hard skills, like the most nowadays used programming languages and frameworks, but also soft skills that so many times are essential to students became a real complete professional.
+Trybe is a technology school that uses active learning as model to prepare their students to face all kinds of real life market challenges. Their course trains not only hard skills, like the most used programming languages and frameworks, but also soft skills that so many times are essential for students to become a real complete professional.
 
 > https://www.betrybe.com/
 
@@ -10,7 +10,7 @@ Trybe is a technology school that uses active learning as model to prepare their
 
 The course is divided into four modules.
 * Module 01 - Web Development Foundations   
-	* Here, I'll will became familliar with the initial concepts, essential to start the journey. Are present subjects as: terminal commands, internet concepts, how to use git and GitHub and, of course, the basics of web development trio, HTML / CSS / JavaScript.
+	* Here, I'll become familliar with the initial concepts, essential to start the journey. There will be subjects like: terminal commands, internet concepts, how to use git and GitHub and, of course, the basics of web development trio, HTML / CSS / JavaScript.
 * Module 02 - Front-end (under construction)
 * Module 03 - Back-end (under construction)
 * Module 04 - Computer Science (under construction)
