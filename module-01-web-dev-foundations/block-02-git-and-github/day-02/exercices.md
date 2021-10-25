@@ -14,4 +14,11 @@ Bash<br/>
 Git<br/>
 HTML<br/>
 CSS<br/>
-a
+
+* Faça um git add nome-do-arquivo.extensao ;
+* Você pode adicionar todos os arquivos que você modificou usando git add . , mas evite isso em commits com muitos arquivos para não adicionar nenhuma alteração por engano;
+* Agora um git commit -m "Mensagem que você gostaria" ;
+* Uma boa prática é sempre resumir o que o seu commit está alterando, por exemplo, git commit -m "Adiciona nova skill" ;
+* Evite juntar muitas modificações em um único commit. Assim, caso haja algum erro no código, ficará mais fácil visualizar em qual alteração ele surgiu;
+* E por último um git push -u origin trybe-skills-changes ;
+
