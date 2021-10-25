@@ -8,9 +8,9 @@
 
 4. No arquivo .txt , ao final da lista de habilidades , adicione mais duas habilidades que serão desenvolvidas na Trybe:
 Exemplo:
-> O que eu vou aprender na Trybe:
-Unix
-Bash
-Git
-HTML
-CSS
+> O que eu vou aprender na Trybe:<br/>
+Unix<br/>
+Bash<br/>
+Git<br/>
+HTML<br/>
+CSS<br/>
