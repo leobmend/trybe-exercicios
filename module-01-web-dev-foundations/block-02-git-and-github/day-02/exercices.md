@@ -6,7 +6,7 @@
 
 3. Crie uma nova branch com o nome trybe-skills-changes e faça checkout nela;
 
-	4. No arquivo .txt , ao final da lista de habilidades , adicione mais duas habilidades que serão desenvolvidas na Trybe:
+4. No arquivo .txt , ao final da lista de habilidades , adicione mais duas habilidades que serão desenvolvidas na Trybe:
 Exemplo:
 > O que eu vou aprender na Trybe:<br/>
 Unix<br/>
