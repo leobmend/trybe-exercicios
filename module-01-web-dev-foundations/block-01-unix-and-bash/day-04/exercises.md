@@ -168,15 +168,23 @@ E pra terminar com a energia óh, lá no alto, que tal aprender agora alguns com
 
 5. No sistema Linux , execute o comando sudo apt-get install cowsay , ou brew install cowsay no macOS . Após a instalação, execute o comando cowsay e algo que você queira falar. Agora faça a vaquinha dizer a frase que está gravada no arquivo fortune.txt ;
 
-
+`sudo apt-get install cowsay`</br>
+`saycow sua-mensagem`</br>
+![saycow](http://www.linuxjournal.com/files/linuxjournal.com/ufiles/imagecache/large-550px-centered/u1002061/11742cowsayf1.png)
 
 6. Descubra os fatores primos usando o comando factor e em seguida o número 42 ;
 
-
+`factor 42`</br>
+`# 42: 2 3 7`
 
 7. Veja como fica a sua sorte do dia ao contrário. Dica: utilize o comando rev .
 
-
+`rev fortune.txt`</br>
+`# .lla fo tuc tsedniknu tsom eht saw sihT`</br>
+`# "raseaC suiluJ" ,eraepsekahS mailliW --`
 
 8. Execute o comando telnet towel.blinkenlights.nl e espere alguns segundos. Lembre-se que você tem mais exercícios para fazer! 😅
 Gostou das curiosidades? Nos Recursos Adicionais tem mais alguns comandos divertidos. Confere lá!
+
+`telnet towel.blinkenlights.nl`</br>
+![star-wars](https://storage.googleapis.com/cdn.thenewstack.io/media/2018/03/4d780610-screenshot-from-star-asciimation-wars.png)
