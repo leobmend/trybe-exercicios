@@ -73,15 +73,22 @@
 `# -rw-rw-r-- 1 leonardo leonardo   48 out 25 10:59 skills2.txt`</br>
 `# -rw-rw-r-- 1 leonardo leonardo   14 out 25 11:04 top_skills.txt`</br>
 
-
 3. Mude a permissão do arquivo bunch_of_things.txt para que todos os usuários possam ter acesso à leitura e escrita, e verifique se está correto com o comando ls -l ;
 > Resultado esperado:
 `# -rw-rw-rw- 1 ana ana 1860 ago 13 11:39 bunch_of_things.txt`
+
+`chmod a+rw bunch_of_things.txt`
 
 4. Tire a permissão de escrita do arquivo bunch_of_things.txt para todos os usuários, verifique se está correto com o comando ls -l;
 > Resultado esperado: 
 `# -r--r--r-- 1 ana ana 1860 ago 13 11:39 bunch_of_things.txt`
 
-5. Volte à permissão do arquivo bunch_of_things.txt para a listada inicialmente utilizando o comando chmod 644 bunch_of_things.txt .
+`chomod a-w bunch_of_things.txt`
+
+5. Volte à permissão do arquivo bunch_of_things.txt para a listada inicialmente utilizando o comando.
 > Resultado esperado: 
 `# -rw-r--r-- 1 ana ana 1860 ago 13 11:39 bunch_of_things.txt`
+
+`chmod 664 bunch_of_things.txt`
+
+## Parte 3 - Permissões
