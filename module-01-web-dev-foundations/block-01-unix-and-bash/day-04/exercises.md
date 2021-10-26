@@ -28,7 +28,7 @@
 
 6. Crie um novo arquivo chamado phrases2.txt pelo terminal e adicione algumas frases de sua escolha.
 
-`echo "maria tem uma boneca" > phrases2.txt`
+`echo "maria tem uma boneca" > phrases2.txt`</br>
 `echo "joao tem uma bicicleta" >> phrases2.txt`
 `echo "amanda tem uma bola" >> phrases2.txt`
 `echo "lucas tem um brasao" >> phrases2.txt`
@@ -60,7 +60,19 @@
 
 1. Navegue até a pasta unix_tests ;
 
+`cd Documents/trybe/trybe-exercises/module-01-web-dev-foundations/block-01-unix-and-bash/day-04/unix-tests`
+
 2. Rode o comando ls -l e veja quais as permissões dos arquivos;
+
+-rw-rw-r-- 1 leonardo leonardo 1967 out 25 11:32 bunch_of_things.txt
+-rw-rw-r-- 1 leonardo leonardo 1842 out 25 10:48 countries.txt
+-rw-rw-r-- 1 leonardo leonardo    0 out 25 10:48 empty.pdf
+-rw-rw-r-- 1 leonardo leonardo    0 out 25 10:48 empty.tbt
+-rw-rw-r-- 1 leonardo leonardo  124 out 25 11:19 phrases2.txt
+-rw-rw-r-- 1 leonardo leonardo  101 out 25 10:48 phrases.txt
+-rw-rw-r-- 1 leonardo leonardo   48 out 25 10:59 skills2.txt
+-rw-rw-r-- 1 leonardo leonardo   14 out 25 11:04 top_skills.txt
+
 
 3. Mude a permissão do arquivo bunch_of_things.txt para que todos os usuários possam ter acesso à leitura e escrita, e verifique se está correto com o comando ls -l ;
 > Resultado esperado:
