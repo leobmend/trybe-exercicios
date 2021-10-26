@@ -29,10 +29,10 @@
 6. Crie um novo arquivo chamado phrases2.txt pelo terminal e adicione algumas frases de sua escolha.
 
 `echo "maria tem uma boneca" > phrases2.txt`</br>
-`echo "joao tem uma bicicleta" >> phrases2.txt`
-`echo "amanda tem uma bola" >> phrases2.txt`
-`echo "lucas tem um brasao" >> phrases2.txt`
-`echo "brenda tem uma presilha" >> phrases2.txt`
+`echo "joao tem uma bicicleta" >> phrases2.txt`</br>
+`echo "amanda tem uma bola" >> phrases2.txt`</br>
+`echo "lucas tem um brasao" >> phrases2.txt`</br>
+`echo "brenda tem uma presilha" >> phrases2.txt`</br>
 
 7. Conte o número de linhas que contêm as letras br.
 
