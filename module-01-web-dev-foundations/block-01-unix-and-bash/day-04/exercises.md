@@ -64,14 +64,14 @@
 
 2. Rode o comando ls -l e veja quais as permissões dos arquivos;
 
--rw-rw-r-- 1 leonardo leonardo 1967 out 25 11:32 bunch_of_things.txt
--rw-rw-r-- 1 leonardo leonardo 1842 out 25 10:48 countries.txt
--rw-rw-r-- 1 leonardo leonardo    0 out 25 10:48 empty.pdf
--rw-rw-r-- 1 leonardo leonardo    0 out 25 10:48 empty.tbt
--rw-rw-r-- 1 leonardo leonardo  124 out 25 11:19 phrases2.txt
--rw-rw-r-- 1 leonardo leonardo  101 out 25 10:48 phrases.txt
--rw-rw-r-- 1 leonardo leonardo   48 out 25 10:59 skills2.txt
--rw-rw-r-- 1 leonardo leonardo   14 out 25 11:04 top_skills.txt
+`# -rw-rw-r-- 1 leonardo leonardo 1967 out 25 11:32 bunch_of_things.txt`</br>
+`# -rw-rw-r-- 1 leonardo leonardo 1842 out 25 10:48 countries.txt`</br>
+`# -rw-rw-r-- 1 leonardo leonardo    0 out 25 10:48 empty.pdf`</br>
+`# -rw-rw-r-- 1 leonardo leonardo    0 out 25 10:48 empty.tbt`</br>
+`# -rw-rw-r-- 1 leonardo leonardo  124 out 25 11:19 phrases2.txt`</br>
+`# -rw-rw-r-- 1 leonardo leonardo  101 out 25 10:48 phrases.txt`</br>
+`# -rw-rw-r-- 1 leonardo leonardo   48 out 25 10:59 skills2.txt`</br>
+`# -rw-rw-r-- 1 leonardo leonardo   14 out 25 11:04 top_skills.txt`</br>
 
 
 3. Mude a permissão do arquivo bunch_of_things.txt para que todos os usuários possam ter acesso à leitura e escrita, e verifique se está correto com o comando ls -l ;
