@@ -149,19 +149,22 @@ E pra terminar com a energia óh, lá no alto, que tal aprender agora alguns com
 `cmatrix`</br>
 ![cmatrix](https://www.linux.com/images/stories/55137/matrix.png)
 
-
-
 2. No sistema Linux , execute o comando sudo apt-get install fortune , ou no macOS brew install fortune , e após a instalação, crie um arquivo de texto chamado fortune.txt que contenha a sua sorte do dia. Utilize apenas uma linha de comando. Dica: use o comando fortune , e o operador > ;
 
-
+`sudo apt-get install fortune`</br>
+`fortune > fortune.txt`</br>
+`# This was the most unkindest cut of all. -- William Shakespeare, "Julius Caesar"`
 
 3. Conte quantas palavras tem a frase da sua sorte do dia. Dica: use o comando wc ;
 
-
+`wc -w fortune.txt`</br>
+`# 13 fortune.txt`
 
 4. Execute o comando sudo apt-get install sl em um terminal Linux , ou brew install sl em um terminal macOS . Após a instalação, execute o comando sl . Agora tente sl -F ;
 
-
+`sudo apt-get install sl`</br>
+`sl`</br>
+![sl](https://www.cyberciti.biz/media/new/tips/2011/05/sl_command_steam_locomotive.png)
 
 5. No sistema Linux , execute o comando sudo apt-get install cowsay , ou brew install cowsay no macOS . Após a instalação, execute o comando cowsay e algo que você queira falar. Agora faça a vaquinha dizer a frase que está gravada no arquivo fortune.txt ;
 
