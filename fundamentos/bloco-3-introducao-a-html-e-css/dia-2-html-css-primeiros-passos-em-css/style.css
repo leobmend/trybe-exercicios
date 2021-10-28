@@ -1,0 +1,25 @@
+h1 {
+    font-family: sans-serif;
+}
+p {
+    font-weight: 600;
+    font-size: 3em;
+}
+body {
+    font-size: 16px;
+}
+ul {
+    font-style: italic;
+    line-height: 1cm;
+    text-align: center;
+    text-decoration: underline;
+}
+#am {
+    background-color: yellow;
+}
+#ve {
+    background-color: red;
+}
+#ma {
+    background-color:saddlebrown;
+}
