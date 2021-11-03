@@ -28,13 +28,25 @@ article {
     background-color: rgb(66, 136, 136);
 }
 
-article h1 {
+article h2 {
     font-size: 45px;
     text-align: center;
     text-decoration: underline;
 }
 
-article p {
+div p {
     font-size: 28px;
+}
+
+table {
+    margin: auto;
+    font-size: 24px;
+    border: solid;
+}
+
+table td {
+    padding: 0 50px 0 50px;
+    text-align: center;
+    border: 1px solid;
 }
 
