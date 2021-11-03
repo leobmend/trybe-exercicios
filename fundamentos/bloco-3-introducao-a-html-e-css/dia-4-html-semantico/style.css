@@ -1,13 +1,18 @@
 body {
     background-color: rgb(143, 180, 180);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header h1 {
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
+    font-size: 60px;
     color: rgb(2, 2, 48);
 }
 
-
+nav li {
+    display: inline;
+    font-size: 35px;
+    background-color: gray;
+    padding: 15px
+}
 
