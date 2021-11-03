@@ -9,11 +9,33 @@ header h1 {
     color: rgb(2, 2, 48);
 }
 
+nav {
+    padding: 15px;
+}
+
 nav li {
     display: inline;
     font-size: 35px;
     background-color: gray;
     padding: 15px;
     border-radius: 10px;
+}
+ 
+article {
+    padding: 25px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: rgb(66, 136, 136);
+}
+
+article h1 {
+    font-size: 45px;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+article p {
+    font-size: 28px;
 }
 
