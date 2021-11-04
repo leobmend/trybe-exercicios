@@ -7,6 +7,10 @@ header h1 {
     text-align: center;
     font-size: 60px;
     color: rgb(2, 2, 48);
+    }
+
+img {
+    border: 2px solid black;
 }
 
 nav {
@@ -26,6 +30,12 @@ article {
     margin: 15px;
     border-radius: 10px;
     background-color: rgb(66, 136, 136);
+}
+
+article div{
+    background-color: rgb(143, 180, 180);
+    border-radius: 10px;
+    padding-left: 10px;
 }
 
 article h2 {
@@ -54,6 +64,7 @@ h3 {
     font-size: 35px;
 }
 
+
 .tbl-img {
     height: 350px;
 }
@@ -70,5 +81,21 @@ h3 {
     position: relative;
     float: right;
     right: 15%;
-    border: 1px solid black;
+}
+
+.eyes {
+    height: 400px;
+}
+.eyes p {
+    position: relative;
+    width: 50%;
+    float: left;
+    left: 3%;
+    top: 3%
+}
+.eyes img {
+    width: 30%;
+    position: relative;
+    right: 12.8%;
+    float: right;
 }
