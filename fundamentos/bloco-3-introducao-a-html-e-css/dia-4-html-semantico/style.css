@@ -50,3 +50,25 @@ table td {
     border: 1px solid;
 }
 
+h3 {
+    font-size: 35px;
+}
+
+.tbl-img {
+    height: 350px;
+}
+
+.tbl-img table {
+    position: relative;
+    float: left;
+    left: 15%;
+    top:10%;
+}
+
+.tbl-img img {
+    width: 25%;
+    position: relative;
+    float: right;
+    right: 15%;
+    border: 1px solid black;
+}
