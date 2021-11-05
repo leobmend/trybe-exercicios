@@ -164,3 +164,28 @@ console.log(true || true); // true
 console.log(true || false); // true
 console.log(false || true); // true
 console.log(false || false); // false
+
+/* SWITCH E CASE */
+
+/* 1. Crie uma variável para armazenar o estado da pessoa candidata no processo seletivo, que pode ser: 'aprovada' , 'lista' ou 'reprovada'; */ 
+
+console.log("\n");
+let situation = "aprovada";
+console.log(situation);
+
+/* 2. Crie uma estrutura condicional com o switch/case que irá imprimir as mensagens do exercício anterior se o estado da pessoa candidata for 'aprovada' , 'lista' ou 'reprovada' . Como default , imprima a mensagem de 'não se aplica'. */
+
+console.log("\n");
+switch (situation) {
+    case "aprovada":
+        console.log("Parabéns, você foi aprovada");
+        break;
+    case "lista":
+        console.log("Você está na nossa lista de espera");
+        break;
+    case "reprovada":
+        console.log("Você foi reprovada(o)");
+        break;
+    default:
+        console.log("Não se aplica")
+}
