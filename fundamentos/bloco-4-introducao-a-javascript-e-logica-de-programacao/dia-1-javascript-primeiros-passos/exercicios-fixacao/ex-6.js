@@ -1,6 +1,6 @@
-const peca = "peão";
+const peca = "Peão";
 
-switch (peca) {
+switch (peca.toLowerCase()) {
     case "bispo":
         console.log("diagonais");
         break;
