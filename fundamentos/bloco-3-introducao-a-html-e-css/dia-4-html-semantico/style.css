@@ -37,21 +37,21 @@ nav li {
     border-radius: 10px;
 }
  
-article {
+.grandes-partes {
     padding: 25px;
     margin: 15px;
     border-radius: 10px;
     background-color: rgb(66, 136, 136);
 }
 
-article section {
+.grandes-partes section {
     background-color: rgb(143, 180, 180);
     border-radius: 10px;
     padding:10px;
     margin: 20px;
 }
 
-article p {
+.grandes-partes p {
     font-size: 28px;
 }
 
@@ -115,3 +115,23 @@ article p {
     position: relative;
     right: 10%;
 }
+
+footer {
+    background-color: rgb(66, 136, 136);
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+footer h3 {
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    font-style: italic;
+    font-size: 24px;
+    color: rgb(0, 0, 146);
+    font-weight: bold;
+}
+
