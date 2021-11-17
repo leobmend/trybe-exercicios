@@ -38,9 +38,12 @@
     // 8. Agora acesse o terceiroFilho a partir de pai .
     irmaoMaisNovo = pai.lastElementChild.previousElementSibling;
     // 9. Crie um irmão para elementoOndeVoceEsta .
-    novoIrmao = document.createElement("section")
+    novoIrmao = document.createElement("section");
     eu.parentElement.appendChild(novoIrmao);
-    console.log(pai.children)
+    // 10. Crie um filho para elementoOndeVoceEsta .
+    novoFilho = document.createElement("section");
+    eu.appendChild(novoFilho);
+    console.log(eu.children)
   </script>
 </body>
 </html>
