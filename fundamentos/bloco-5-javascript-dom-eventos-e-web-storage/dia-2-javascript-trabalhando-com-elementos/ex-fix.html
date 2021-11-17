@@ -35,15 +35,19 @@
     const textoAtencao = eu.nextSibling.textContent;
     // 7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
     let irmaoMaisNovo = eu.nextElementSibling;
-    // 8. Agora acesse o terceiroFilho a partir de pai .
+    // 8. Agora acesse o terceiroFilho a partir de pai.
     irmaoMaisNovo = pai.lastElementChild.previousElementSibling;
-    // 9. Crie um irmão para elementoOndeVoceEsta .
+    // 9. Crie um irmão para elementoOndeVoceEsta.
     novoIrmao = document.createElement("section");
     eu.parentElement.appendChild(novoIrmao);
-    // 10. Crie um filho para elementoOndeVoceEsta .
+    // 10. Crie um filho para elementoOndeVoceEsta.
     novoFilho = document.createElement("section");
     eu.appendChild(novoFilho);
-    console.log(eu.children)
+    // 11. Crie um filho para primeiroFilhoDoFilho.
+    novoNeto = document.createElement("section");
+    eu.firstElementChild.appendChild(novoNeto);
+    console.log(primeiroFilhoDoFilho.children)
+
   </script>
 </body>
 </html>
