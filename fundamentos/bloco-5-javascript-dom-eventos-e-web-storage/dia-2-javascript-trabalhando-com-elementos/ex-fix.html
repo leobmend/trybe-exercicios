@@ -49,6 +49,14 @@
     // 12. A partir desse filho criado, acesse terceiroFilho .
     neto = eu.firstElementChild.firstElementChild;
     irmaoMaisNovo = neto.parentElement.parentElement.nextElementSibling;
+    // 13. Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+    let listaElementos = document.querySelectorAll("section");
+    excecoes = ["pai", "elementoOndeVoceEsta", "primeiroFilhoDoFilho"];
+    for (let elemento of listaElementos) {
+      if (!excecoes.includes(elemento.id)) {
+        elemento.parentNode.removeChild(elemento);
+      }
+    }
   </script>
 </body>
 </html>
