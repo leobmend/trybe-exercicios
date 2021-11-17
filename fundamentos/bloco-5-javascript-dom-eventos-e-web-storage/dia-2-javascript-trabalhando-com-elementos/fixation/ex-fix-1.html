@@ -20,18 +20,22 @@
   </main>
   <script>
     // 1. Acesse o elemento elementoOndeVoceEsta .
-    const eu = document.getElementById("elementoOndeVoceEsta")
+    const eu = document.getElementById("elementoOndeVoceEsta");
     // 2. Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
-    const pai = eu.parentNode
-    pai.style.backgroundColor = "lightgreen"
+    const pai = eu.parentNode;
+    pai.style.backgroundColor = "lightgreen";
     // 3. Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
-    const primeiroFilho = eu.firstElementChild
+    const primeiroFilho = eu.firstElementChild;
     primeiroFilho.innerText = "Joaquim Filho Primeiro"
     // 4. Acesse o primeiroFilho a partir de pai .
-    let irmao = pai.firstElementChild
+    let irmao = pai.firstElementChild;
     // 5. Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
-    irmao = eu.previousElementSibling
-    console.log(irmao) 
+    irmao = eu.previousElementSibling;
+    // 6. Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+    const textoAtencao = eu.nextSibling.textContent;
+    // 7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+    let irmaoMaisNovo = eu.nextElementSibling;
+    console.log(irmaoMaisNovo)
   </script>
 </body>
 </html>
