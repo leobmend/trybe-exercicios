@@ -35,7 +35,8 @@
     const textoAtencao = eu.nextSibling.textContent;
     // 7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
     let irmaoMaisNovo = eu.nextElementSibling;
-    console.log(irmaoMaisNovo)
+    // 8. Agora acesse o terceiroFilho a partir de pai .
+    irmaoMaisNovo = pai.lastElementChild.previousElementSibling;
   </script>
 </body>
 </html>
