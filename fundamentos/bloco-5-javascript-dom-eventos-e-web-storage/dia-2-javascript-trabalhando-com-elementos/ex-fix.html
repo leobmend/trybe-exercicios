@@ -46,8 +46,9 @@
     // 11. Crie um filho para primeiroFilhoDoFilho.
     novoNeto = document.createElement("section");
     eu.firstElementChild.appendChild(novoNeto);
-    console.log(primeiroFilhoDoFilho.children)
-
+    // 12. A partir desse filho criado, acesse terceiroFilho .
+    neto = eu.firstElementChild.firstElementChild;
+    irmaoMaisNovo = neto.parentElement.parentElement.nextElementSibling;
   </script>
 </body>
 </html>
