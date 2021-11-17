@@ -76,10 +76,14 @@
             paragraph[0].innerText = paragraph[0].innerText.toUpperCase();
         }
         toUpperCase()
-/*     
-    
-    Crie uma função que exiba o conteúdo de todas as tags <p> no console. */
-       
+        // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        function consoleParagraphs() {
+            const paragraphs = document.getElementsByTagName("p");
+            for (let paragraph of paragraphs) {
+              console.log(paragraph.innerText);
+            }
+        }
+        consoleParagraphs()
     </script>
   </body>
 </html>
