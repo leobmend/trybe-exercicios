@@ -19,9 +19,3 @@ for (let noUrgentSubtitle of noUrgentSubtitles) {
 
 const noUrgentSection = document.querySelector(".no-emergency-tasks");
 noUrgentSection.style.backgroundColor = "#F9DB5E"
-
-console.log("asdaasd")
-
-console.log("asdaasd")
-
-
