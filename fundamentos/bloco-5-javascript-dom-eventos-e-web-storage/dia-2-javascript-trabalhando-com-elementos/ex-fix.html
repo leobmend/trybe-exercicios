@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+  </main>
+  <script>
+    // 1. Acesse o elemento elementoOndeVoceEsta.
+    const eu = document.getElementById("elementoOndeVoceEsta");
+    // 2. Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+    const pai = eu.parentNode;
+    pai.style.backgroundColor = "lightgreen";
+    // 3. Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+    const primeiroFilho = eu.firstElementChild;
+    primeiroFilho.innerText = "Joaquim Filho Primeiro"
+    // 4. Acesse o primeiroFilho a partir de pai.
+    let irmao = pai.firstElementChild;
+    // 5. Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+    irmao = eu.previousElementSibling;
+    // 6. Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+    const textoAtencao = eu.nextSibling.textContent;
+    // 7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+    let irmaoMaisNovo = eu.nextElementSibling;
+    // 8. Agora acesse o terceiroFilho a partir de pai.
+    irmaoMaisNovo = pai.lastElementChild.previousElementSibling;
+    // 9. Crie um irmão para elementoOndeVoceEsta.
+    novoIrmao = document.createElement("section");
+    eu.parentElement.appendChild(novoIrmao);
+    // 10. Crie um filho para elementoOndeVoceEsta.
+    novoFilho = document.createElement("section");
+    eu.appendChild(novoFilho);
+    // 11. Crie um filho para primeiroFilhoDoFilho.
+    novoNeto = document.createElement("section");
+    eu.firstElementChild.appendChild(novoNeto);
+    // 12. A partir desse filho criado, acesse terceiroFilho .
+    neto = eu.firstElementChild.firstElementChild;
+    irmaoMaisNovo = neto.parentElement.parentElement.nextElementSibling;
+    // 13. Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+    let listaElementos = document.querySelectorAll("section");
+    excecoes = ["pai", "elementoOndeVoceEsta", "primeiroFilhoDoFilho"];
+    for (let elemento of listaElementos) {
+      if (!excecoes.includes(elemento.id)) {
+        elemento.parentNode.removeChild(elemento);
+      }
+    }
+  </script>
+</body>
+</html>
+
