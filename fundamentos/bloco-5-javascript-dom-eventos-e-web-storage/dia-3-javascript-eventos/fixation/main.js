@@ -20,11 +20,9 @@ function onClick(event) {
   let clicked = event.target;
   if (clicked.className !== "tech") {
     for (let element of listElements) {
-      console.log(element.innerText)
       if (element.className === "tech") {
         element.className = "";
       }
-      console.log(element.className)
     }
     clicked.className = "tech";
   }
@@ -32,6 +30,12 @@ function onClick(event) {
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
+input.addEventListener("keyup", onText);
+function onText(event) {
+  let text = event.target.value;
+  liTarget = document.querySelector(".tech");
+  liTarget.innerText = text;
+}
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
