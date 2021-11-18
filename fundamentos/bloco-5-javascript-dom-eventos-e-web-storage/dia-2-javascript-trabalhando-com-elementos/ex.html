@@ -72,9 +72,15 @@
         // 4. Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
         p = document.createElement("p");
         p.innerText = "Quis est enim dolor amet. Laborum laboris velit consectetur et ex eiusmod. Nulla aliqua labore ex non incididunt labore.";
-        document.getElementsByClassName("center-content")[0].appendChild(p)
-
-        
+        document.getElementsByClassName("center-content")[0].appendChild(p);
+        // 5. Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+        leftContent = document.createElement("section");
+        leftContent.className = "left-content";
+        main.appendChild(leftContent);
+        // 6. Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+        rightContent = document.createElement("section");
+        rightContent.className = "right-content";
+        main.appendChild(rightContent);
     </script>
   </body>
 </html>
