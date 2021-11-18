@@ -68,7 +68,12 @@
         // 3. Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
         centerContent = document.createElement("section");
         centerContent.className = "center-content";
-        main.appendChild(centerContent)
+        main.appendChild(centerContent);
+        // 4. Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+        p = document.createElement("p");
+        p.innerText = "Quis est enim dolor amet. Laborum laboris velit consectetur et ex eiusmod. Nulla aliqua labore ex non incididunt labore.";
+        document.getElementsByClassName("center-content")[0].appendChild(p)
+
         
     </script>
   </body>
