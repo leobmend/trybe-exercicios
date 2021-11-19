@@ -40,6 +40,11 @@ function onText(event) {
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portifólio?
+mySpotrybefy = document.getElementById("my-spotrybefy");
+mySpotrybefy.addEventListener("dblclick", onDblclick);
+function onDblclick(event) {
+  window.open("https://leobmend.github.io/", 'noreferrer') // Ainda preciso compreender exatamente o que o 'noreferrer' realiza, mas sem este a página inicial congelava. Aparentemente, o argumento impede que a página inciial fique aguardando alguma resposta, o que a congela indefinidamente.
+}
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
