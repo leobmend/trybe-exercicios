@@ -59,8 +59,6 @@ function onMouseOut(event) {
   elementTarget.style.color = "white"
 }
 
-
-
 // Segue abaixo um exemplo do uso de event.target:
 
 function resetText(event) {
