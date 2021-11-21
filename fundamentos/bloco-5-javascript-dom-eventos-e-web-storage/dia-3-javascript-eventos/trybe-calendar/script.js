@@ -188,7 +188,43 @@ function addColorDayEvent() {
             } else {
                 daySelected.style.color = subtitleSelectedColor;
             }
+        } else {
+            daySelected.style.color = "rgb(119, 119, 119)";
         }
     }
 }
 addColorDayEvent();
+
+/* Bônus: Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
+- Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
+- Ao pressionar a tecla "enter" o evento também deverá ser disparado.
+- Dica - Propriedade: key . */
+
+function addCommitmentEvent() {
+    let commitmentsList = document.querySelector(".task-list");
+    let addButton = document.getElementById("btn-add");
+    let input = document.getElementById("task-input");
+    addButton.addEventListener("click", onClickAddCommitment);
+    input.addEventListener("keydown", onKeyEnterAddCommitment);
+    function onClickAddCommitment(event) {
+        if (input.value === "") {
+            alert("Por favor, insira um compromisso no campo de inserção!")
+        } else {
+            let commitment = document.createElement("li");
+            commitment.textContent = input.value;
+            commitmentsList.appendChild(commitment); 
+        }
+    }
+    function onKeyEnterAddCommitment (event) {
+        if (event.key === "Enter") {   
+            if (input.value === "") {
+                alert("Por favor, insira um compromisso no campo de inserção!")
+            } else {
+                let commitment = document.createElement("li");
+                commitment.textContent = input.value;
+                commitmentsList.appendChild(commitment); 
+            }
+        }
+    }
+}
+addCommitmentEvent();
