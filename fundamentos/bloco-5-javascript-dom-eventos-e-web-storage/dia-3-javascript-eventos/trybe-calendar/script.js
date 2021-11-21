@@ -104,7 +104,7 @@ clickEventFridayBtn("1000");
 - Dica - Propriedade: event.target . */
 
 function dayMouseOver(ratio) {
-    days = document.querySelectorAll("#days li");
+    let days = document.querySelectorAll("#days li");
     for (let day of days) {
         day.addEventListener("mouseover", mouseOverDays);
     }
@@ -114,7 +114,7 @@ function dayMouseOver(ratio) {
     }
 }
 function dayMouseOut() {
-    days = document.querySelectorAll(".day");
+    let days = document.querySelectorAll(".day");
     for (let day of days) {
         day.addEventListener("mouseout", mouseOutDays);
     }
@@ -169,3 +169,26 @@ function addSelectedEvent() {
     }
 }
 addSelectedEvent();
+
+/* 10. Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
+- Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) . */
+
+function addColorDayEvent() {
+    let days = document.querySelectorAll(".day");
+    for (let day of days) {
+        day.addEventListener("click", onClickSelectDay);
+    }
+    function onClickSelectDay(event) {
+        let daySelected = event.target;
+        let subtitleSelectedColor = document.querySelector(".selected");
+        if (subtitleSelectedColor !== null) {
+            subtitleSelectedColor = subtitleSelectedColor.style.backgroundColor;
+            if (daySelected.style.color === subtitleSelectedColor) {
+                daySelected.style.color = "rgb(119, 119, 119)";
+            } else {
+                daySelected.style.color = subtitleSelectedColor;
+            }
+        }
+    }
+}
+addColorDayEvent();
