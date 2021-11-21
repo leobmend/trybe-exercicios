@@ -47,6 +47,184 @@ function createButton(buttonName) {
 }
 createButton("Feriados");
 
+/* 3. Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
+- É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" . */
 
+function clickEventHolidayBtn(newBackgroundColor) {
+    let button = document.getElementById("btn-holiday");
+    button.addEventListener("click", toggleColorHolidays);
+    let oldBackgroundColor = "rgb(238, 238, 238)";
+    function toggleColorHolidays(event) {
+        let holidays = document.getElementsByClassName("holiday");
+            for (let holiday of holidays) {
+                if (holiday.style.backgroundColor === newBackgroundColor) {
+                holiday.style.backgroundColor = oldBackgroundColor;
+            } else {
+                holiday.style.backgroundColor = newBackgroundColor;
+            }
+        }
+    }
+}
+clickEventHolidayBtn("white");
 
+/* 4. Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
+- Adicione a este botão o ID "btn-friday" .
+- Adicione este botão como filho/filha da tag <div> com classe "buttons-container" . */
 
+function createButton2(buttonName) {
+    let button = document.createElement("button");
+    button.id = "btn-friday";
+    button.innerText = buttonName;
+    let buttonsContainer = document.querySelector(".buttons-container");
+    buttonsContainer.appendChild(button);
+}
+createButton2("Sexta-feira");
+
+/* 5. Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
+- É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias. */
+
+function clickEventFridayBtn(boldStrength) {
+    let button = document.getElementById("btn-friday");
+    button.addEventListener("click", toggleBoldFriday);
+    function toggleBoldFriday(event) {
+        let fridays = document.getElementsByClassName("friday");
+            for (let friday of fridays) {
+                let a = friday.style.fontWeight
+                if (friday.style.fontWeight == boldStrength) {
+                friday.style.fontWeight = "normal";
+            } else {
+                friday.style.fontWeight = boldStrength;
+            }
+        }
+    }
+}
+clickEventFridayBtn("1000");
+
+/* 6. Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+- Dica - Propriedade: event.target . */
+
+function dayMouseOver(ratio) {
+    let days = document.querySelectorAll("#days li");
+    for (let day of days) {
+        day.addEventListener("mouseover", mouseOverDays);
+    }
+    function mouseOverDays(event) {
+        event.target.style.fontSize = (ratio * 20) + "px";
+        event.target.style.fontWeight = 800;
+    }
+}
+function dayMouseOut() {
+    let days = document.querySelectorAll(".day");
+    for (let day of days) {
+        day.addEventListener("mouseout", mouseOutDays);
+    }
+    function mouseOutDays(event) {
+        event.target.style.fontSize = (parseInt(event.target.style.fontSize) / ratio) + "px";
+        event.target.style.fontWeight = 200;
+    }
+}
+let ratio = 1.8;
+dayMouseOver(ratio);
+dayMouseOut(ratio);
+
+/* 7. Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+- O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" . */
+
+function addTask(taskString) {
+    let myTasks = document.getElementsByClassName("my-tasks")[0];
+    let task = document.createElement("span");
+    task.innerText = taskString;
+    myTasks.appendChild(task);
+}
+addTask("Cozinhar");
+
+/* 8. Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
+- O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
+- O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" . */
+
+function addSubtitle(color) {
+    let myTasks = document.getElementsByClassName("my-tasks")[0];
+    let subtitle = document.createElement("div");
+    subtitle.className = "task";
+    subtitle.style.backgroundColor = color;
+    myTasks.appendChild(subtitle);
+}
+addSubtitle("yellow");
+
+/* 9. Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
+- Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada. */
+
+function addSelectedEvent() {
+    let subtitles = document.getElementsByClassName("task");
+    for (let subtitle of subtitles) {
+        subtitle.addEventListener("click", onClickSubtitle);
+        function onClickSubtitle(event) {
+            let classes = Object.values(subtitle.classList);
+            if (classes.includes("selected")) {
+                subtitle.classList.remove("selected");
+            } else {     
+                subtitle.className += " selected"       
+            }
+        }
+    }
+}
+addSelectedEvent();
+
+/* 10. Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
+- Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) . */
+
+function addColorDayEvent() {
+    let days = document.querySelectorAll(".day");
+    for (let day of days) {
+        day.addEventListener("click", onClickSelectDay);
+    }
+    function onClickSelectDay(event) {
+        let daySelected = event.target;
+        let subtitleSelectedColor = document.querySelector(".selected");
+        if (subtitleSelectedColor !== null) {
+            subtitleSelectedColor = subtitleSelectedColor.style.backgroundColor;
+            if (daySelected.style.color === subtitleSelectedColor) {
+                daySelected.style.color = "rgb(119, 119, 119)";
+            } else {
+                daySelected.style.color = subtitleSelectedColor;
+            }
+        } else {
+            daySelected.style.color = "rgb(119, 119, 119)";
+        }
+    }
+}
+addColorDayEvent();
+
+/* Bônus: Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
+- Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
+- Ao pressionar a tecla "enter" o evento também deverá ser disparado.
+- Dica - Propriedade: key . */
+
+function addCommitmentEvent() {
+    let commitmentsList = document.querySelector(".task-list");
+    let addButton = document.getElementById("btn-add");
+    let input = document.getElementById("task-input");
+    addButton.addEventListener("click", onClickAddCommitment);
+    input.addEventListener("keydown", onKeyEnterAddCommitment);
+    function onClickAddCommitment(event) {
+        if (input.value === "") {
+            alert("Por favor, insira um compromisso no campo de inserção!")
+        } else {
+            let commitment = document.createElement("li");
+            commitment.textContent = input.value;
+            commitmentsList.appendChild(commitment); 
+        }
+    }
+    function onKeyEnterAddCommitment (event) {
+        if (event.key === "Enter") {   
+            if (input.value === "") {
+                alert("Por favor, insira um compromisso no campo de inserção!")
+            } else {
+                let commitment = document.createElement("li");
+                commitment.textContent = input.value;
+                commitmentsList.appendChild(commitment); 
+            }
+        }
+    }
+}
+addCommitmentEvent();
