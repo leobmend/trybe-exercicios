@@ -3,6 +3,12 @@ let readBtn = document.getElementById("read-btn");
 let configsBtn = document.getElementById("configs-btn");
 let readerContainer = document.getElementById("reader-container")
 
+window.onresize = resizeReaderContainer;
+
+function resizeReaderContainer() {
+    readerContainer.style.marginTop = (window.innerWidth * 0.005) + "px"
+}
+
 //window.onload = applyConfigs();
 
 function applyConfigs(reader) {
