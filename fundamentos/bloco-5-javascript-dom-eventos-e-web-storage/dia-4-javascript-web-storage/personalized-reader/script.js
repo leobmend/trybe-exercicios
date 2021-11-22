@@ -3,13 +3,18 @@ let readBtn = document.getElementById("read-btn");
 let configsBtn = document.getElementById("configs-btn");
 let readerContainer = document.getElementById("reader-container")
 
-window.onresize = resizeReaderContainer;
+window.onresize = resizeMarginContainers;
+window.onload = resizeMarginContainers;
 
-function resizeReaderContainer() {
-    readerContainer.style.marginTop = (window.innerWidth * 0.005) + "px"
+addEventRead()
+addEventConfigs()
+
+function resizeMarginContainers() {
+    let containers = document.querySelectorAll(".containers");
+    for (let container of containers) {
+        container.style.marginTop = (window.innerWidth * 0.005) + "px";
+    }
 }
-
-//window.onload = applyConfigs();
 
 function applyConfigs(reader) {
     if (localStorage.userConfigs !== undefined) {
@@ -22,7 +27,7 @@ function applyConfigs(reader) {
     }
 }
 
-function addEventConfigs() {
+function addEventRead() {
     inserter.addEventListener("keydown", onKeyEnterOrClickEnterRead);
     readBtn.addEventListener("click", onKeyEnterOrClickEnterRead)
     function onKeyEnterOrClickEnterRead(event) {
@@ -38,4 +43,15 @@ function addEventConfigs() {
     }
 }
 
-addEventConfigs()
+function addEventConfigs () {
+    configsBtn.addEventListener("click", onClickConfigs);
+    function onClickConfigs() {
+        let configs = document.getElementsByID("configs");
+        let bodyChildren = Object.values(body.children);
+        /* if (!bodyChildren.includes(configs)) {
+            bodyChildren
+        } */
+    }
+
+}
+
