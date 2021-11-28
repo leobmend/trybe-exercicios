@@ -1,4 +1,51 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    color: rgb(114, 111, 111);
+}
+
+#form-header {
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(214, 217, 220);
+    border-radius: 3px;
+    margin: 40px 50px;
+    padding: 50px;
+}
+
+#cv-form {
+    margin: 0 50px;
+    background-color: rgb(252, 252, 252);
+    border: 1px solid rgb(214, 217, 220);
+}
+
+fieldset {
+    border: 1px solid rgb(214, 217, 220);
+    margin: 2px;
+}
+
+legend {
+    padding-left: 2px;
+    font-weight: bold;
+}
+
+select {
+    padding: 1px;
+}
+
+input[type=text] {
+    padding: 1px;
+    width: 250px;
+}
+
+.line-content {
+    margin: 14px;
+  }
+
+::placeholder {
+    text-align: center;
 }
