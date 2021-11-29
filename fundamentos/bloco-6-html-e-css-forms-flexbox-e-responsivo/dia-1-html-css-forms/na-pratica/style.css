@@ -18,6 +18,13 @@ body {
     padding: 50px;
 }
 
+#result {
+    background-color: rgb(252, 252, 252);
+    border: 1px solid rgb(214, 217, 220);
+    margin: 40px 50px;
+    padding: 50px;
+}
+
 #cv-form {
     margin: 0 50px;
     background-color: rgb(252, 252, 252);
@@ -63,4 +70,9 @@ input[type=text] {
     height: 28px;
     width: 80px;
     justify-content: center;
+}
+
+.red-alert {
+    border-color: red;
+    border-width: 2.5px;
 }

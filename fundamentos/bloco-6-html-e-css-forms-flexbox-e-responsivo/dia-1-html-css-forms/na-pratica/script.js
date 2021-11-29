@@ -50,7 +50,33 @@ function largerInputs(inputsList) {
 function narrowInputs(inputsList) {
     for (let input of inputsList) {
         let inputElement = document.getElementsByName(input)[0];
-        inputElement.style.width = '300px'
+        inputElement.style.width = '300px';
+    }
+}
+
+function borderPainter() {
+    let inputs = Object.values(document.querySelectorAll("input[type='text'"));
+    inputs.push(document.querySelector('[name=resume'));
+    inputs.push(document.querySelector('select'));
+    inputs.push(document.querySelector('#house'));
+    inputs.push(document.querySelector('#apartment'));
+
+    for (let input of inputs) {
+        input.className = ''
+    }
+}
+
+function textFilledVerification() {
+    let inputs = Object.values(document.querySelectorAll("input[type='text'"));
+    inputs.splice(5, 0, document.querySelector('[name=resume'));
+    let resultDiv = document.createElement('div');
+
+    for (let input of inputs) {
+        if (input.value === '') {
+            resultDiv.innerText = 'Por favor, preencha o campo em destaque vermelho para prosseguir.';
+            input.className = 'red-alert';
+            return resultDiv;
+        }
     }
 }
 
@@ -76,9 +102,24 @@ function dateVerification() {
 
 function submitHandler(event) {
     event.preventDefault();
+    
+    let previousResultDiv = document.getElementById('result');
+    if (previousResultDiv !== null) {
+        previousResultDiv.remove();
+    }
+    
     let resultDiv;
 
+    borderPainter();
+
+
     resultDiv = dateVerification();
+    resultDiv = textFilledVerification();
+    
+
+
+    resultDiv.id = 'result';
+
     let form = document.getElementsByTagName('form')[0];
     document.body.insertBefore(resultDiv, form)
 }
