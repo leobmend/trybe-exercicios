@@ -54,7 +54,7 @@
             <div class='line-content'>
                 Cidade: <input type='text' name='city' required maxlength=28 placeholder='Digite sua Cidade'>
                 Estado: <select id='state' name='state' required>
-                            <option value=''>Escolha seu estado</option>
+                            <option disabled selected value>Escolha seu estado</option>
                         </select>
             </div>
             <div class='line-content'>
@@ -63,15 +63,17 @@
             <div class='line-content'>
                 Tipo de residência:
                 <input type='radio' name='houseType' id='house' value='house' required>
-                <label fo             
-                r='apartment'>Apartamento</label>
+                <label for='house'>Casa</label>
+                <input type='radio' name='houseType' id='apartment' value='apartment' requiured>
+                <label for='apartment'>Apartamento</label>
             </div>
         </fieldset>
         
      <fieldset>
          <legend>Experiência Profissional</legend>
          <div class='line-content'>
-             Resumo do currículo: <textarea name='resume' maxlength=1000 cols='200' rows='10' required></textarea>
+             Resumo do currículo: <br>
+             <textarea name='resume' maxlength=1000 cols='150' rows='10' required></textarea>
          </div>
          <div class='line-content'>
              Cargo: <input type='text' name='job' required maxlength=40 placeholder='Digite o seu cargo'>

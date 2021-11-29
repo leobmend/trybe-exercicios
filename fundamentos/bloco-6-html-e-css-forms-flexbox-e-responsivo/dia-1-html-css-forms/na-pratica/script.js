@@ -39,7 +39,6 @@ function addStatesOptions(states) {
         statesSelection.appendChild(stateOption)
     }
 }
-addStatesOptions(states);
 
 function largerInputs(inputsList) {
     for (let input of inputsList) {
@@ -47,7 +46,6 @@ function largerInputs(inputsList) {
         inputElement.style.width = '1000px'
     }
 }
-largerInputs(['name','address','description']);
 
 function narrowInputs(inputsList) {
     for (let input of inputsList) {
@@ -55,24 +53,41 @@ function narrowInputs(inputsList) {
         inputElement.style.width = '300px'
     }
 }
-narrowInputs(['cpf','state','starterDate']);
 
-function onClickDateVerification() {
-    let starterDate = document.getElementsByName('starterDate')[0];
+function dateVerification() {
+    let starterDate = document.getElementsByName('starterDate')[0].value;
+    let resultDiv = document.createElement('div');
+
     if (starterDate[2] === '/' || starterDate[5] === '/') {
         dateList = starterDate.split('/');
-        maxNumber = 31;
-        for (let number of dateList) {
-            number = parseInt(number);
-            if (number < 0 || number > maxNumber) {
-                alert("Por favor, insira a data com o formato indicado: dia/mês/ano");
-                break;
+        maxNumber = [31, 12, Infinity];
+        for (let i = 0; i <= 2; i += 1) {
+            let number = parseInt(dateList[i]);
+            if (number < 0 || number > maxNumber[i] || Number.isNaN(number)) {
+                resultDiv.innerText = "Por favor, insira a data com valores válidos para dia, mês e ano.";
+                return resultDiv;
             }
         }
     } else {
-        alert("Por favor, insira a data com o formato indicado: dia/mês/ano");
+        resultDiv.innerText = "Por favor, insira a data com o formato indicado: dia/mês/ano.";
+        return resultDiv;
     }
 }
 
-let submitBtn = document.getElementById('submit-button');
-submitBtn.addEventListener('click', onClickDateVerification);
+function submitHandler(event) {
+    event.preventDefault();
+    let resultDiv;
+
+    resultDiv = dateVerification();
+    let form = document.getElementsByTagName('form')[0];
+    document.body.insertBefore(resultDiv, form)
+}
+
+window.onload = function () {
+    let submitBtn = document.getElementById('submit-button');
+    addStatesOptions(states);
+    largerInputs(['name','address','description']);
+    narrowInputs(['cpf','state','starterDate']);
+
+    submitBtn.addEventListener('click', submitHandler);
+}
