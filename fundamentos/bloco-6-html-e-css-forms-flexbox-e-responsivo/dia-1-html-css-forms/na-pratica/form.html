@@ -33,7 +33,7 @@
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Document</title>
+    <title>Cadastro de Currículo</title>
     <link rel='stylesheet' href='style.css'>
 </head>
 <body>
@@ -63,14 +63,30 @@
             <div class='line-content'>
                 Tipo de residência:
                 <input type='radio' name='houseType' id='house' value='house' required>
-                <label for='house'>Casa</label>
-                <input type='radio' name='houseType' id='apartment' value='apartment' required>
-                <label for='apartment'>Apartamento</label>
+                <label fo             
+                r='apartment'>Apartamento</label>
             </div>
         </fieldset>
+        
+     <fieldset>
+         <legend>Experiência Profissional</legend>
+         <div class='line-content'>
+             Resumo do currículo: <textarea name='resume' maxlength=1000 cols='200' rows='10' required></textarea>
+         </div>
+         <div class='line-content'>
+             Cargo: <input type='text' name='job' required maxlength=40 placeholder='Digite o seu cargo'>
+         </div>
+         <div class='line-content'>
+            Descrição das atividades: <input type='text' name='description' required maxlength=500 placeholder='Descreva as atividades do cargo'>
+         </div>
+         <div class="line-content">
+            Data de início: <input type='text' name='starterDate' required placeholder="dia/mês/ano">
+        </div>
+     </fieldset>
     </form>
-    
+    <div class='line-content'>
+        <input type="submit" id='submit-button'>
+    </div>
     <script src='script.js'></script>
 </body>
 </html>
-

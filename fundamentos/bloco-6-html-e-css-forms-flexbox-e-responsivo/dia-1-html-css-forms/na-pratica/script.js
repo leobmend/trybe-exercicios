@@ -41,10 +41,38 @@ function addStatesOptions(states) {
 }
 addStatesOptions(states);
 
-let nameInput = document.getElementsByName('name')[0]
-nameInput.style.width = '600px'
+function largerInputs(inputsList) {
+    for (let input of inputsList) {
+        let inputElement = document.getElementsByName(input)[0];
+        inputElement.style.width = '1000px'
+    }
+}
+largerInputs(['name','address','description']);
 
-let addressInput = document.getElementsByName('address')[0]
-addressInput.style.width = '600px'
+function narrowInputs(inputsList) {
+    for (let input of inputsList) {
+        let inputElement = document.getElementsByName(input)[0];
+        inputElement.style.width = '300px'
+    }
+}
+narrowInputs(['cpf','state','starterDate']);
 
+function onClickDateVerification() {
+    let starterDate = document.getElementsByName('starterDate')[0];
+    if (starterDate[2] === '/' || starterDate[5] === '/') {
+        dateList = starterDate.split('/');
+        maxNumber = 31;
+        for (let number of dateList) {
+            number = parseInt(number);
+            if (number < 0 || number > maxNumber) {
+                alert("Por favor, insira a data com o formato indicado: dia/mês/ano");
+                break;
+            }
+        }
+    } else {
+        alert("Por favor, insira a data com o formato indicado: dia/mês/ano");
+    }
+}
 
+let submitBtn = document.getElementById('submit-button');
+submitBtn.addEventListener('click', onClickDateVerification);

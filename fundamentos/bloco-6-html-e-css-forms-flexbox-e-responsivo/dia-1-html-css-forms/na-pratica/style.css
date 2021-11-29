@@ -6,6 +6,7 @@
 
 body {
     color: rgb(114, 111, 111);
+    font-weight: bold;
 }
 
 #form-header {
@@ -25,21 +26,26 @@ body {
 
 fieldset {
     border: 1px solid rgb(214, 217, 220);
-    margin: 2px;
+    margin: 10px;
 }
 
 legend {
     padding-left: 2px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 select {
     padding: 1px;
+    color: rgb(114, 111, 111);
+    text-align: center;
+    width: 500px;
 }
 
 input[type=text] {
     padding: 1px;
-    width: 250px;
+    width: 500px;
+    text-align: center;
 }
 
 .line-content {
@@ -48,4 +54,13 @@ input[type=text] {
 
 ::placeholder {
     text-align: center;
+}
+
+#submit-button {
+    display: flex;
+    margin: 30px auto;
+    font-size: 18px;
+    height: 28px;
+    width: 80px;
+    justify-content: center;
 }
