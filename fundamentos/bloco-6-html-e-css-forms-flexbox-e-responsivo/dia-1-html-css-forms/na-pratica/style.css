@@ -11,8 +11,9 @@ body {
 
 #form-header {
     text-align: center;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(162, 170, 177);
     border: 1px solid rgb(214, 217, 220);
+    color: white;
     border-radius: 3px;
     margin: 40px 50px;
     padding: 50px;

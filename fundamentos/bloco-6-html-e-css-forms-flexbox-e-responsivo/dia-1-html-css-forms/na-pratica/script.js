@@ -36,7 +36,7 @@ function addStatesOptions(states) {
         let stateOption = document.createElement('option');
         stateOption.value = state;
         stateOption.innerText = states[state];
-        statesSelection.appendChild(stateOption)
+        statesSelection.appendChild(stateOption);
     }
 }
 
@@ -55,7 +55,7 @@ function narrowInputs(inputsList) {
 }
 
 function borderPainter() {
-    let inputs = Object.values(document.querySelectorAll("input[type='text'"));
+    let inputs = Object.values(document.querySelectorAll('input[type="text"'));
     inputs.push(document.querySelector('[name=resume'));
     inputs.push(document.querySelector('select'));
     inputs.push(document.querySelector('#house'));
@@ -67,7 +67,7 @@ function borderPainter() {
 }
 
 function textFilledVerification() {
-    let inputs = Object.values(document.querySelectorAll("input[type='text'"));
+    let inputs = Object.values(document.querySelectorAll('input[type="text"'));
     inputs.splice(5, 0, document.querySelector('[name=resume'));
     let resultDiv = document.createElement('div');
 
@@ -80,8 +80,25 @@ function textFilledVerification() {
     }
 }
 
+function optionPickedVerification() {
+    let select = document.querySelector('select');
+    let radio = document.getElementsByName('houseType');
+    let resultDiv = document.createElement('div');
+
+    if (select.value === '') {
+        resultDiv.innerText = 'Por favor, selecione o estado em que você reside.';
+        return resultDiv;
+    }
+    if (!radio[0].checked && !radio[1].checked) {
+        resultDiv.innerText = 'Por favor, selecione um tipo de residência.';
+        return resultDiv;
+    }
+    
+}
+
 function dateVerification() {
-    let starterDate = document.getElementsByName('starterDate')[0].value;
+    let input = document.getElementsByName('starterDate')[0];
+    let starterDate = input.value;
     let resultDiv = document.createElement('div');
 
     if (starterDate[2] === '/' || starterDate[5] === '/') {
@@ -90,12 +107,12 @@ function dateVerification() {
         for (let i = 0; i <= 2; i += 1) {
             let number = parseInt(dateList[i]);
             if (number < 0 || number > maxNumber[i] || Number.isNaN(number)) {
-                resultDiv.innerText = "Por favor, insira a data com valores válidos para dia, mês e ano.";
+                resultDiv.innerText = 'Por favor, insira a data com valores válidos para dia, mês e ano.';
                 return resultDiv;
             }
         }
     } else {
-        resultDiv.innerText = "Por favor, insira a data com o formato indicado: dia/mês/ano.";
+        resultDiv.innerText = 'Por favor, insira a data com o formato indicado: dia/mês/ano.';
         return resultDiv;
     }
 }
@@ -112,14 +129,37 @@ function submitHandler(event) {
 
     borderPainter();
 
-
-    resultDiv = dateVerification();
     resultDiv = textFilledVerification();
-    
+    if (resultDiv === undefined) {
+        resultDiv = optionPickedVerification();
+    }
+    if (resultDiv === undefined) {
+        resultDiv = dateVerification();
+    }
 
+    if (resultDiv === undefined) {
+        resultDiv = document.createElement('div');
+        let inputs = Object.values(document.querySelectorAll('input[type="text"'));
+        inputs.splice(4, 0, document.querySelector('select'));
+        inputs.splice(6, 0, document.querySelector('[name="houseType"]:checked'));
+        inputs.splice(7, 0, document.querySelector('[name=resume]'));
 
+        let infoList = ['Nome: ', 'E-mail: ', 'CPF: ', 'Cidade: ', 'Estado: ', 'Endereço: ', 'Tipo de redidência: ', 'Resumo profissional: ', 'Cargo: ', 'Descrição das atividades: ', 'Data de início: ']
+
+        for (let i = 0; i < inputs.length; i += 1) {
+            let p = document.createElement('p');
+            p.innerText = infoList[i];
+            if (inputs[i].value === 'house') {
+                p.innerText += 'Casa'
+            } else if (inputs[i].value === 'apartment') {
+                p.innerText += 'Apartamento'
+            } else {
+                p.innerText += inputs[i].value;
+            }
+            resultDiv.appendChild(p);
+        }
+    }
     resultDiv.id = 'result';
-
     let form = document.getElementsByTagName('form')[0];
     document.body.insertBefore(resultDiv, form)
 }
