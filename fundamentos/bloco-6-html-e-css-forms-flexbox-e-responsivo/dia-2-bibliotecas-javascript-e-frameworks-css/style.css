@@ -1,0 +1,29 @@
+/* Para esse exercício, apliquei a biblioteca JS/CSS Bootstrap para estilizar o projeto Todo List, realizado na Trybe (Turma XP). Links abaixo:
+Bootstrap: https://getbootstrap.com/
+Projeto Todo List*: https://github.com/tryber/sd-018-b-project-todo-list
+*Apenas conseguirá acesso, se fizer parte da Turma XP Trybe  */
+
+
+#funcionamento {
+  font-size: 1.5em;
+  color: gray;
+}
+
+.selecionado {
+  background-color: gray;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+#lista-tarefas {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+#criar-tarefa {
+  margin-left: 10px;
+  padding: 2px; 
+}
