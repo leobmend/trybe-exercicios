@@ -1,3 +1,8 @@
+// Para esse exercício, apliquei a biblioteca JS/CSS Bootstrap para estilizar o projeto Todo List, realizado na Trybe (Turma XP). Links abaixo:
+// Bootstrap: https://getbootstrap.com/
+// Projeto Todo List*: https://github.com/tryber/sd-018-b-project-todo-list
+// *Apenas conseguirá acesso, se fizer parte da Turma XP Trybe 
+
 const main = document.querySelector('main');
 
 // Declaração de funções dos escutadores de evento:
