@@ -50,7 +50,6 @@ function onClickClearAll() {
 function onClickRemoveCompleted() {
   const completedItens = document.querySelectorAll('.completed');
   for (let i = 0; i < completedItens.length; i += 1) {
-    console.log(completedItens[i].value);
     completedItens[i].remove();
   }
 }
