@@ -1,0 +1,95 @@
+<!-- 
+1 . Crie um <fieldset> para os seguintes dados pessoais:
+- Nome - Texto / Limite de 40 caracteres / Campo obrigatório
+- Email - Texto / Limite de 50 caracteres / Campo obrigatório
+- CPF - Texto / Limite de 11 caracteres / Campo obrigatório
+- Endereço - Texto / Limite de 200 caracteres / Campo obrigatório
+- Cidade - Texto / Limite de 28 caracteres / Campo obrigatório
+- Estado - Select / Todos os estados do Brasil / Utilize estruturas de repetição via JavaScript para gerar os <option> / Campo obrigatório
+- Tipo - Radio Button / Casa, Apartamento / Campo obrigatório
+
+2. Crie outro <fieldset> para dados do seu último emprego
+- Resumo do currículo - TextArea / Limite de 1000 caracteres / Campo obrigatório
+- Cargo - Texto / Limite de 40 caracteres / Campo obrigatório
+- Descrição do cargo - Texto / Limite de 500 caracteres / Campo obrigatório
+- Data de início - Texto / Campo obrigatório / Verificar o formato da data dd/mm/aaaa
+  - O dia deve ser > 0 e <= 31.
+  - O mês deve ser > 0 e <= 12.
+  - O ano não pode ser negativo.
+  - Caso alguma das condições seja inválida no momento do envio do formulário, exibir via alert uma mensagem de erro contextualizada.
+
+3. Logo abaixo do formulário, crie um botão que:
+- Chame uma função JavaScript e interrompa o fluxo automático do form utilizando o preventDefault() . Note que isso vai impedir as validações do HTML ao fazer o submit
+- Implemente, agora, no Javascript , as validações que foram pedidas ao longo da montagem do formulário.
+- Caso todos os dados sejam válidos, monte uma <div> com o consolidado dos dados que foram inseridos no formulário.
+- Caso haja algum dado inválido, mostre em uma <div> uma mensagem de erro. Se o erro for na Data de Início , a mensagem deve ser contextualizada.
+
+4. Crie um botão Limpar que limpa todos os campos do formulário e a <div> com seu currículo também. 
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Cadastro de Currículo</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+    <header id='form-header'>
+        <h1>Formulário para cadastro de currículo</h1>
+        <p>Preencha os campos com os seus dados.</p>
+    </header>
+    <form id='cv-form'>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div class='line-content'>
+                Nome: <input type='text' name='name' required maxlength=40 placeholder='Digite seu nome completo'>
+            </div>
+            <div class='line-content'>
+                E-mail: <input type='text' name='email' required maxlength=50 placeholder='Digite seu e-mail'>
+                CPF: <input type='text' name='cpf' required maxlength=11 placeholder='Digite seu CPF'>
+            </div>
+            <div class='line-content'>
+                Cidade: <input type='text' name='city' required maxlength=28 placeholder='Digite sua Cidade'>
+                Estado: <select id='state' name='state' required>
+                            <option disabled selected value>Escolha seu estado</option>
+                        </select>
+            </div>
+            <div class='line-content'>
+                Endereço: <input type='text' name='address' required maxlength=200 placeholder='Digite seu endereço'>
+            </div>
+            <div class='line-content'>
+                Tipo de residência:
+                <input type='radio' name='houseType' id='house' value='house' required>
+                <label for='house'>Casa</label>
+                <input type='radio' name='houseType' id='apartment' value='apartment' requiured>
+                <label for='apartment'>Apartamento</label>
+            </div>
+        </fieldset>
+        
+     <fieldset>
+         <legend>Experiência Profissional</legend>
+         <div class='line-content'>
+             Resumo do currículo: <br>
+             <textarea name='resume' maxlength=1000 cols='150' rows='10' required></textarea>
+         </div>
+         <div class='line-content'>
+             Cargo: <input type='text' name='job' required maxlength=40 placeholder='Digite o seu cargo'>
+         </div>
+         <div class='line-content'>
+            Descrição das atividades: <input type='text' name='description' required maxlength=500 placeholder='Descreva as atividades do cargo'>
+         </div>
+         <div class="line-content">
+            Data de início: <input type='text' name='starterDate' required placeholder="dia/mês/ano">
+        </div>
+     </fieldset>
+    </form>
+    <div class='button-container'>
+        <input type="submit" class='button'>
+        <button class='button' id='clear-btn'>Limpar</button>        
+    </div>
+    <script src='script.js'></script>
+</body>
+</html>
