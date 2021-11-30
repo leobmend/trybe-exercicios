@@ -62,7 +62,7 @@ function borderPainter() {
     inputs.push(document.querySelector('#apartment'));
 
     for (let input of inputs) {
-        input.className = ''
+        input.className = '';
     }
 }
 
@@ -164,11 +164,32 @@ function submitHandler(event) {
     document.body.insertBefore(resultDiv, form)
 }
 
+function clearInputs() {
+    let inputs = Object.values(document.querySelectorAll('input[type="text"'));
+    inputs.push(document.querySelector('[name=resume'));
+    inputs.push(document.querySelector('select'));
+    inputs = inputs.concat(Object.values(document.querySelectorAll('[type=radio]')));
+
+
+    for (let input of inputs) {
+        if (input.type === 'radio') {
+            input.checked = false
+        } else {
+            input.className = '';
+            input.value = '';
+        }
+    }
+}
+
 window.onload = function () {
-    let submitBtn = document.getElementById('submit-button');
+    let submitBtn = document.querySelector('input[type=submit');
+    submitBtn.addEventListener('click', submitHandler);
+
+    let clearBtn = document.getElementById('clear-btn');
+    clearBtn.addEventListener('click', clearInputs);
+
     addStatesOptions(states);
     largerInputs(['name','address','description']);
     narrowInputs(['cpf','state','starterDate']);
-
-    submitBtn.addEventListener('click', submitHandler);
 }
+

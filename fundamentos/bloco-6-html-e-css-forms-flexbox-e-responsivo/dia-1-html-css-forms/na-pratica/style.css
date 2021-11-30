@@ -7,6 +7,7 @@
 body {
     color: rgb(114, 111, 111);
     font-weight: bold;
+    font-size: 10px;
 }
 
 #form-header {
@@ -17,6 +18,7 @@ body {
     border-radius: 3px;
     margin: 40px 50px;
     padding: 50px;
+    font-size: 3em;
 }
 
 #result {
@@ -24,22 +26,24 @@ body {
     border: 1px solid rgb(214, 217, 220);
     margin: 40px 50px;
     padding: 50px;
+    font-size: 2em;
 }
 
 #cv-form {
     margin: 0 50px;
     background-color: rgb(252, 252, 252);
     border: 1px solid rgb(214, 217, 220);
+    font-size: 2em;
 }
 
 fieldset {
     border: 1px solid rgb(214, 217, 220);
-    margin: 10px;
+    margin: 15px;
 }
 
 legend {
     padding-left: 2px;
-    font-size: 18px;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -64,13 +68,18 @@ input[type=text] {
     text-align: center;
 }
 
-#submit-button {
+.button-container {
+    width: 100%;
     display: flex;
-    margin: 30px auto;
-    font-size: 18px;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.button {
+    font-size: 2em;
+    margin: 0 20px;
     height: 28px;
     width: 80px;
-    justify-content: center;
 }
 
 .red-alert {
