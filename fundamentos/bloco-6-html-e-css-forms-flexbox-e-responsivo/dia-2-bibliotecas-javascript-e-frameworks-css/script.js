@@ -1,4 +1,4 @@
-const { body } = document;
+const main = document.querySelector('main');
 
 // Declaração de funções dos escutadores de evento:
 
@@ -29,7 +29,7 @@ function onClickNewTask() {
   const inputItem = document.getElementById('texto-tarefa');
   const taskList = document.getElementById('lista-tarefas');
 
-  newTask.className = 'item-lista';
+  newTask.className = 'item-lista list-group-item';
   newTask.innerText = inputItem.value;
   taskList.appendChild(newTask);
 
@@ -87,8 +87,14 @@ function onClickMoveDown() {
 
 function onClickSave() {
   const taskList = document.getElementById('lista-tarefas');
-
-  localStorage.setItem('savedList', taskList.innerHTML);
+  const selectedItem = document.querySelector('.selecionado');
+  if (selectedItem !== null) {
+    selectedItem.classList.remove('selecionado');
+    localStorage.setItem('savedList', taskList.innerHTML);
+    selectedItem.classList.add('selecionado');
+  } else {
+    localStorage.setItem('savedList', taskList.innerHTML);
+  }
 }
 
 function onOpenLoadSavedList() {
@@ -115,10 +121,12 @@ function onClickRemoveSelected() {
 // Declaração de funções de adição dos elementos HTML:
 
 function addHeader(text) {
-  const header = document.createElement('header');
-
-  header.innerText = text;
-  body.appendChild(header);
+  const headerH1 = document.createElement('h1');
+  const header = document.getElementsByTagName('header')[0];
+  
+  headerH1.innerText = text;
+  headerH1.className = 'display-1'
+  header.appendChild(headerH1);
 }
 
 function addHowTo(text) {
@@ -134,7 +142,8 @@ function addInputDiv() {
   const inputDiv = document.createElement('div');
 
   inputDiv.id = 'add-container';
-  body.appendChild(inputDiv);
+  inputDiv.className = 'container-md d-flex align-items-center'
+  main.appendChild(inputDiv);
 }
 
 function addInput(text) {
@@ -150,7 +159,8 @@ function addTaskList() {
   const taskList = document.createElement('ol');
 
   taskList.id = 'lista-tarefas';
-  body.appendChild(taskList);
+  taskList.className = 'list-group list-group-numbered'
+  main.appendChild(taskList);
 }
 
 function addNewTaskBtn(text) {
@@ -158,6 +168,7 @@ function addNewTaskBtn(text) {
   const inputDiv = document.getElementById('add-container');
 
   newTaskBtn.id = 'criar-tarefa';
+  newTaskBtn.className = 'btn btn-outline-secondary';
   newTaskBtn.innerText = text;
   inputDiv.appendChild(newTaskBtn);
 
@@ -168,7 +179,8 @@ function addMenuDiv() {
   const menuDiv = document.createElement('div');
 
   menuDiv.id = 'menu-container';
-  body.appendChild(menuDiv);
+  menuDiv.className = 'btn-group'
+  main.appendChild(menuDiv);
 }
 
 function addClearAllBtn(text) {
@@ -176,6 +188,7 @@ function addClearAllBtn(text) {
   const menuDiv = document.getElementById('menu-container');
 
   clearAllBtn.id = 'apaga-tudo';
+  clearAllBtn.className = 'btn btn-outline-secondary'
   clearAllBtn.innerText = text;
   menuDiv.appendChild(clearAllBtn);
 
@@ -187,6 +200,7 @@ function addRemoveCompletedBtn(text) {
   const menuDiv = document.getElementById('menu-container');
 
   removeCompletedBtn.id = 'remover-finalizados';
+  removeCompletedBtn.className = 'btn btn-outline-secondary'
   removeCompletedBtn.innerText = text;
   menuDiv.appendChild(removeCompletedBtn);
 
@@ -199,6 +213,7 @@ function addSaveBtn(text) {
 
   saveBtn.id = 'salvar-tarefas';
   saveBtn.innerText = text;
+  saveBtn.className = 'btn btn-outline-secondary';
   menuDiv.appendChild(saveBtn);
 
   saveBtn.addEventListener('click', onClickSave);
@@ -211,8 +226,10 @@ function addMoveBtns(textUp, textDown) {
 
   moveUpBtn.id = 'mover-cima';
   moveUpBtn.innerText = textUp;
+  moveUpBtn.className = 'btn btn-outline-secondary';
   moveDownBtn.id = 'mover-baixo';
   moveDownBtn.innerText = textDown;
+  moveDownBtn.className = 'btn btn-outline-secondary';
   menuDiv.appendChild(moveUpBtn);
   menuDiv.appendChild(moveDownBtn);
 
@@ -226,6 +243,7 @@ function addRemoveSelectedBtn(text) {
 
   removeSelectedBtn.id = 'remover-selecionado';
   removeSelectedBtn.innerText = text;
+  removeSelectedBtn.className = 'btn btn-outline-secondary';
   menuDiv.appendChild(removeSelectedBtn);
 
   removeSelectedBtn.addEventListener('click', onClickRemoveSelected);
@@ -237,7 +255,7 @@ addHeader('Minha Lista de Tarefas');
 addHowTo('Clique duas vezes em um item para marcá-lo como completo');
 addInputDiv();
 addInput('Insira uma nova tarefa...');
-addNewTaskBtn('Adcionar tarefa');
+addNewTaskBtn('Adicionar tarefa');
 addTaskList();
 addMenuDiv();
 addClearAllBtn('Limpar lista');

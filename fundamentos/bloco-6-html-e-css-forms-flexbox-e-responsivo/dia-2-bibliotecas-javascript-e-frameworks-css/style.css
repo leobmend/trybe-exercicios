@@ -1,5 +1,5 @@
 #funcionamento {
-  font-size: 12px;
+  font-size: 1.5em;
   color: gray;
 }
 
@@ -9,4 +9,15 @@
 
 .completed {
   text-decoration: line-through solid black;
+}
+
+#lista-tarefas {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+#criar-tarefa {
+  margin-left: 10px;
+  padding: 2px; 
 }
