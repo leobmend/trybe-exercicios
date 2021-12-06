@@ -1,0 +1,72 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+.container {
+  background-color: rgb(173, 148, 106);
+  color: white;
+}
+
+.container header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 70px;
+  height: 10vh;
+  padding: 1.5vh 0;
+}
+
+.container header p {
+  text-align: center;
+  font-size: 2.9em;
+  font-weight: 800;
+}
+
+.container header hr {
+  border-radius: 20px;
+  width: 92vw;
+}
+
+.container header ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.container header li {
+  list-style: none;
+
+  font-size: 2em;
+  font-weight: 800;
+  margin: 0 7vw;
+}
+
+.container aside {
+  background-color: rgb(232, 232, 232);
+  color: rgb(102, 102, 102);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 1vh;
+}
+
+.container aside h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.container aside li {
+  list-style: none;
+  font-size: 1.8em;
+  font-weight: 800;
+  margin: 0.5vh 0;
+}
