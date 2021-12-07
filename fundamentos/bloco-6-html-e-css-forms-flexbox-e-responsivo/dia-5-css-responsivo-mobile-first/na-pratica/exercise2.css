@@ -14,7 +14,7 @@ html {
   color: white;
 }
 
-.container header {
+header {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -24,33 +24,32 @@ html {
   padding: 1.5vh 0;
 }
 
-.container header p {
+header p {
   text-align: center;
   font-size: 2.9em;
   font-weight: 800;
 }
 
-.container header hr {
-  border-radius: 20px;
-  width: 92vw;
+header hr {
+  width: 90vw;
+  margin: 3px 0;
 }
 
-.container header ul {
+header ul {
   display: flex;
   justify-content: center;
   flex-direction: row;
   width: 100%;
 }
 
-.container header li {
+header li {
   list-style: none;
-
   font-size: 2em;
   font-weight: 800;
   margin: 0 7vw;
 }
 
-.container aside {
+aside {
   background-color: rgb(232, 232, 232);
   color: rgb(102, 102, 102);
   border-radius: 10px;
@@ -58,15 +57,62 @@ html {
   margin: 1vh;
 }
 
-.container aside h2 {
+aside h2 {
   font-size: 2em;
   text-align: center;
   margin-bottom: 5px;
 }
 
-.container aside li {
+aside li {
   list-style: none;
   font-size: 1.8em;
   font-weight: 800;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0.5vh 0;
+}
+
+article {
+  background-color: rgb(240, 240, 240);
+  color: rgb(50, 50, 50);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 1vh;
+}
+
+article h1 {
+  font-size: 3em;
+  text-decoration:underline;
+  font-weight: 900;
+  margin: 0 0 0.5em 0;
+}
+
+article p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.5em;
+  line-height: 1.25em;
+  margin: 0.5em 0;
+  text-align:justify;
+}
+
+article i {
+  font-size: 1em;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 70px;
+  height: 13vh;
+}
+
+footer h3 {
+  font-size: 2em;
+}
+
+footer p {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 800;
 }
