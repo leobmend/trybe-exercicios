@@ -12,6 +12,7 @@ html {
 .container {
   background-color: rgb(173, 148, 106);
   color: white;
+  width: 100%;
 }
 
 header {
@@ -54,7 +55,7 @@ aside {
   color: rgb(102, 102, 102);
   border-radius: 10px;
   padding: 20px;
-  margin: 1vh;
+  margin: 1.2vw;
 }
 
 aside h2 {
@@ -76,7 +77,7 @@ article {
   color: rgb(50, 50, 50);
   border-radius: 10px;
   padding: 20px;
-  margin: 1vh;
+  margin: 1.2vw;
 }
 
 article h1 {
@@ -103,8 +104,8 @@ footer {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  min-height: 70px;
-  height: 13vh;
+  min-height: 85px;
+  padding: 2vh 0;
 }
 
 footer h3 {
@@ -115,4 +116,61 @@ footer p {
   text-align: center;
   font-size: 1.4em;
   font-weight: 800;
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    min-height: 110px;
+  }
+
+  header p {
+    font-size: 3.5em;
+  }
+
+  header li {
+    font-size: 3em;;
+  }
+
+  .asides-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  aside {
+    flex-grow: 1;
+  }
+
+  aside:nth-of-type(1) {
+    margin-right: 0.6vw;
+  }
+
+  aside:nth-of-type(2) {
+    margin-left: 0.6vw;
+  }
+
+  aside h2 {
+    font-size: 2.8em;
+  }
+
+  aside li {
+    font-size: 2.2em;
+  }
+
+  article p {
+    line-height: 1.3em;
+  }
+
+  footer {
+    min-height: 150px;
+  }
+
+  footer h3 {
+    font-size: 2.5em;
+  }
+  
+  footer p {
+    font-size: 1.8em;
+    width: 80%;
+  }
 }
