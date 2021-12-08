@@ -120,15 +120,15 @@ footer p {
 
 @media screen and (min-width: 900px) {
   header {
-    min-height: 110px;
+    min-height: 130px;
   }
 
   header p {
-    font-size: 3.5em;
+    font-size: 4.2em;
   }
 
   header li {
-    font-size: 3em;;
+    font-size: 3.3em;;
   }
 
   .asides-container {
@@ -157,8 +157,13 @@ footer p {
     font-size: 2.2em;
   }
 
+  article h1 {
+    font-size: 3.5em;
+  }
+
   article p {
     line-height: 1.3em;
+    font-size: 3em;
   }
 
   footer {
