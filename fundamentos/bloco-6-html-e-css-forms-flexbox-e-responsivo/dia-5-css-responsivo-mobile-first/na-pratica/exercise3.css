@@ -89,5 +89,45 @@
   #content-container {
     display: flex;
     flex-direction: column;
-  };
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #aside {
+    display: none;
+  }
+  
+  body {
+    padding: 0;
+  }
+
+  #header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 35px;
+  }
+
+  #content img {
+    width: 100%;
+  }
+
+  #navigation {
+    margin-top: 75px;
+  }
+
+  #navigation ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  #navigation ul li {
+    display: block;
+  }
+
+  #navigation li a {
+    border-right: none;
+  }
 }
