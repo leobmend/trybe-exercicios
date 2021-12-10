@@ -4,7 +4,7 @@
 -Bônus (opcional): tente fazer o mesmo exercício de forma recursiva . Spoiler: É possível resolver com uma linha usando ternary operator .
 */
 
-const factorial = number => {
+/* const factorial = number => {
   if (number < 0) {
     console.log("Insira um número maior ou igual a zero!");
   } else if (number === 0) {
@@ -18,4 +18,20 @@ const factorial = number => {
     return result;
   }
 }
-console.log(factorial(5))
+console.log(factorial(5)); */
+
+/* 
+2. Crie uma função que receba uma frase e retorne qual a maior palavra.
+*/
+
+const biggerWord = phrase => {
+  const wordsList = phrase.split(' ');
+  let biggerWord = wordsList[0];
+  for (let i = 1; i < wordsList.length; i += 1) {
+    if (biggerWord.length < wordsList[i].length) {
+      biggerWord = wordsList[i];
+    }
+  }
+  return biggerWord;
+}
+console.log(biggerWord('Retorna logo a maior palavra dessa frase por favor'));
