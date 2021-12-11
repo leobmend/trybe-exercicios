@@ -24,7 +24,7 @@ console.log(factorial(5)); */
 2. Crie uma função que receba uma frase e retorne qual a maior palavra.
 */
 
-const biggerWord = phrase => {
+/* const biggerWord = phrase => {
   const wordsList = phrase.split(' ');
   let biggerWord = wordsList[0];
   for (let i = 1; i < wordsList.length; i += 1) {
@@ -35,3 +35,20 @@ const biggerWord = phrase => {
   return biggerWord;
 }
 console.log(biggerWord('Retorna logo a maior palavra dessa frase por favor'));
+ */
+
+/* 
+3. Crie uma página que contenha:
+- Um botão ao qual será associado um event listener ;
+- Uma variável clickCount no arquivo JavaScript que acumule o número de clicks no botão;
+- Um campo no HTML que vá atualizando a quantidade de clicks no botão conforme a variável clickCount é atualizada.
+*/
+
+const btn = document.querySelector('button');
+const counter = document.querySelector('div');
+let clickCount = 0;
+
+btn.addEventListener('click', () => {
+  clickCount += 1;
+  counter.innerText = clickCount;
+})
