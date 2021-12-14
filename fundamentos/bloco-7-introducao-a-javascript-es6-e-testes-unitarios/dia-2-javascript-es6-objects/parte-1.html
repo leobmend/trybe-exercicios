@@ -61,6 +61,9 @@
         pResult.innerText = `Resultado: ${val1 + val2}` 
       } catch (error) {
         pResult.innerText = error.message;
+      } finally {
+        inputVal1.value = '';
+        inputVal2.value = '';
       }
     }
     window.onload = () => {
