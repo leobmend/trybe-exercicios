@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Calculadora</title>
+</head>
+<body>
+  <p>Informe dois números para realizar a soma:</p>
+  <label for='value1'>Valor 1:</label>
+  <input type='text' id='value1'>
+  <label for='value2'>Valor 2:</label>
+  <input type='text' id='value2'>
+  <button id='button'>Somar</button>
+  <p id='result'></p>
+  <script>
+    /* 
+    function sum() {
+      const value1 = document.getElementById('value1').value;
+      const value2 = document.getElementById('value2').value;
+      const result = parseInt(value1) + parseInt(value2);
+      document.getElementById('result').innerHTML = `Resultado: ${result}`;
+      document.getElementById('value1').value = '';
+      document.getElementById('value2').value = '';
+    }
+    window.onload = () => {
+      const button = document.getElementById('button');
+      button.addEventListener('click', sum);
+    } 
+    */
+    /* 
+    1. Crie um erro personalizado que será chamado se a pessoa usuária digitar apenas um número.
+    - Tente executar a aplicação com um dos valores em branco. Notou que o retorno não é muito descritivo?
+    - Utilize o throw new Error e o bloco try/catch .
+    - Imprima o erro no parágrafo com id result , para que a pessoa usuária saiba o que aconteceu. Lembre-se de usar erros descritivos!
+    - Evite funções que tenham muitas responsabilidades distintas. 
+    2. Agora adicione uma outra exceção, caso a pessoa usuária digite um valor que não seja numérico.
+    - Você pode fazer essa verificação utilizando a função isNan() .
+    */
+    const inputVal1 = document.getElementById('value1');
+    const inputVal2 = document.getElementById('value2');
+    const pResult = document.getElementById('result');
+    const button = document.getElementById('button');
+    function verifyFill(value1, value2) {
+      if (value1 === '' || value2 === '') {
+        throw new Error('Por favor, preencha os dois campos.');
+      }
+    }
+    function verifyNumbers(value1, value2) {
+      if (isNaN(value1) || isNaN(value2)) {
+        throw new Error('Por favor, prencha os campos com dois valores numéricos.');
+      }
+    }
+    function sum() {
+      try {
+        const val1 = parseInt(inputVal1.value);
+        const val2 = parseInt(inputVal2.value);
+        verifyFill(inputVal1.value, inputVal2.value);
+        verifyNumbers(val1, val2);
+        pResult.innerText = `Resultado: ${val1 + val2}` 
+      } catch (error) {
+        pResult.innerText = error.message;
+      } finally {
+        inputVal1.value = '';
+        inputVal2.value = '';
+      }
+    }
+    window.onload = () => {
+      button.addEventListener('click', sum);
+    }
+  </script>
+</body>
+</html>
