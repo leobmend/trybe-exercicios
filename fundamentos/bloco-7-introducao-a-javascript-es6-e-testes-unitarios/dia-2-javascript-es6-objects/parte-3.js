@@ -112,11 +112,61 @@ console.log(verifyPair(lesson3, 'materia', 'Maria Clara')) */
 Bonus 1. Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
 */
 
-function studentsPerSubject(object, subject) {
+/* function studentsPerSubject(object, subject) {
   let totalStudents = 0;
   for (let lesson in object) {
     totalStudents = object[lesson].materia === subject ? totalStudents + object[lesson].numeroEstudantes : totalStudents;
   }
   return totalStudents;
 }
-console.log(studentsPerSubject(allLessons,'Matemática'))
+console.log(studentsPerSubject(allLessons,'Matemática')) */
+
+/* 
+2. Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5.
+*/
+
+function getTeachersList(object) {
+  let teachersList = [];
+  for (let lesson in object) {
+    if (!teachersList.includes(object[lesson].professor)) {
+      teachersList.push(object[lesson].professor);
+    } 
+  }
+  return teachersList;
+}
+
+function getTeachersReport(object) {
+  let teachersList = getTeachersList(object);
+  const teachersReport = {};
+  for (let teacher of teachersList) {
+    teachersReport[teacher] = {
+      materia: [],
+      numeroEstudantes: 0,
+    }
+    for (let lesson in object) {
+      if (object[lesson].professor === teacher) {
+        teachersReport[teacher].materia.push(object[lesson].materia);
+        teachersReport[teacher].numeroEstudantes += object[lesson].numeroEstudantes;
+      }
+    }
+    teachersReport[teacher].materia = Array.from(new Set(teachersReport[teacher].materia))
+  }
+  return teachersReport;
+}
+
+const lesson4 = {
+  materia: 'Português',
+  numeroEstudantes: 35,
+  professor: 'João',
+  turno: 'tarde',
+};
+const lesson5 = {
+  materia: 'Geometria',
+  numeroEstudantes: 15,
+  professor: 'Maria Clara',
+  turno: 'tarde',
+};
+Object.assign(allLessons, {'lesson4': lesson4}, {lesson5: lesson5});
+
+console.log(getTeachersReport(allLessons));
+
