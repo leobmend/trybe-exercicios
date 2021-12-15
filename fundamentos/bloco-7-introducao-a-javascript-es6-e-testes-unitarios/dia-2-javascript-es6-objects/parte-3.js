@@ -25,7 +25,7 @@ const lesson3 = {
 /* function addProperty(object, key, value) {
   object[key] = value;
 }
-addProperty(lesson2, 'turno', 'Noite');
+addProperty(lesson2, 'turno', 'noite');
 console.log(lesson2) */
 
 /* 
@@ -41,10 +41,22 @@ console.log(lesson2) */
 printObjKeys(lesson1) */
 
 /* 
-Crie uma função para mostrar o tamanho de um objeto.
+3. Crie uma função para mostrar o tamanho de um objeto.
 */
 
-function objectSize(object) {
+/* function objectSize(object) {
   console.log(`This object has a total of ${Object.keys(object).length} properties.`)
 }
-objectSize(lesson3)
+objectSize(lesson3) */
+
+/* 
+4. Crie uma função para listar os valores de um objeto. Essa função deve receber um objeto como parâmetro.
+*/
+
+function printObjValues(object) {
+  const values = Object.values(object);
+  for (let i = 0; i < values.length; i += 1) {
+    console.log(`${i + 1}. ${values[i]}`);
+  }
+}
+printObjValues(lesson1);
