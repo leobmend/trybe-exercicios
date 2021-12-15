@@ -49,8 +49,26 @@ const customerInfo = (order) => {
 console.log(customerInfo(order));
 
 const orderModifier = (order) => {
-  // Adicione abaixo as informações necessárias.
-
+  order.name = 'Luiz Silva';
+  order.drinks = {
+    water: {
+      type: 'Água mineral Crystal C/ Gás',
+      price: 5,
+      amount: 1,
+    }
+  }
+  order.payment.total = 55;
+  const pizzas = Object.keys(order.order.pizza);
+  let pizzasString = pizzas[0];
+  for (let i = 1; i < pizzas.length; i += 1) {
+    pizzasString = `${pizzasString}, ${pizzas[i]}`;
+  }
+  const drinks = Object.keys(order.order.drinks);
+  let drinksString = `, ${order.order.drinks[drinks[0]].type}`;
+  for (let i = 1; i < drinks.length; i += 1) {
+    let drinkType = `, ${order.order.drinks[drinks[i]].type}`;
+  }
+  return `Olá ${order.name}, o total do seu pedido de ${pizzasString}${drinksString} é R$ ${parseFloat(order.payment.total).toFixed(2)}`;
 }
 
-orderModifier(order);
+console.log(orderModifier(order));
