@@ -92,7 +92,8 @@ console.log(allStudents(allLessons)); */
 console.log(getValueByPosition(lesson1, 2)); */
 
 /* 
-8. Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
+8. Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:console.log(verifyPair(lesson3, 'turno','noite'));
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'))
 */
 
 /* function verifyPair(object, key, value) {
@@ -105,7 +106,18 @@ console.log(getValueByPosition(lesson1, 2)); */
     return true;
   }
 }
-console.log(verifyPair(lesson3, 'turno','noite'));
+/* Função refatorada para utilizar o Object.entries(): */
+/* function verifyPair(object, key, value) {
+  const objectEntries = Object.entries(object);
+  let check = false;
+  for (let entrie of objectEntries) {
+    if (entrie[0] === key && entrie[1] === value) {
+      check = true;
+    }
+  }
+  return check;
+}
+console.log(verifyPair(lesson3, 'materia', 'Matemática'));
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara')) */
 
 /* 
@@ -169,4 +181,3 @@ const lesson5 = {
 Object.assign(allLessons, {'lesson4': lesson4}, {lesson5: lesson5});
 
 console.log(getTeachersReport(allLessons));
-
