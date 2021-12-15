@@ -95,7 +95,7 @@ console.log(getValueByPosition(lesson1, 2)); */
 8. Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
 */
 
-function verifyPair(object, key, value) {
+/* function verifyPair(object, key, value) {
   const objectKeys = Object.keys(object);
   if (!objectKeys.includes(key)) {
     return false;
@@ -106,4 +106,17 @@ function verifyPair(object, key, value) {
   }
 }
 console.log(verifyPair(lesson3, 'turno','noite'));
-console.log(verifyPair(lesson3, 'materia', 'Maria Clara'))
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara')) */
+
+/* 
+Bonus 1. Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
+*/
+
+function studentsPerSubject(object, subject) {
+  let totalStudents = 0;
+  for (let lesson in object) {
+    totalStudents = object[lesson].materia === subject ? totalStudents + object[lesson].numeroEstudantes : totalStudents;
+  }
+  return totalStudents;
+}
+console.log(studentsPerSubject(allLessons,'Matemática'))
