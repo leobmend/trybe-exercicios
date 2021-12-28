@@ -1,4 +1,3 @@
-const { test } = require('picomatch');
 const sum = require('./ex-1');
 
 describe('Testes do exercício 1:', () => {
