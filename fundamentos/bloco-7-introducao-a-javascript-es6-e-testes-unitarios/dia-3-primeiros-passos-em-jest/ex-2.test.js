@@ -1,4 +1,3 @@
-const { exp } = require('prelude-ls');
 const myRemove = require('./ex-2');
 
 describe('Testes do exercício 2:', () => {
