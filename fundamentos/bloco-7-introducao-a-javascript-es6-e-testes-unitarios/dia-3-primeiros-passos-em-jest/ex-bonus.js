@@ -45,6 +45,7 @@ const searchEmployee = (id, detail) => {
       return professionalBoard[i][detail];
     }
   }
+  return "ID não identificada." 
 };
 
 module.exports = searchEmployee;
