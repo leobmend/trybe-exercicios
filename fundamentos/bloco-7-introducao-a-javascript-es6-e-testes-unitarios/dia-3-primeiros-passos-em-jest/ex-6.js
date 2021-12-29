@@ -17,8 +17,20 @@
     '2 copos de água'
 */
 
-function hydrate() {
-
+function hydrate(drinksString) {
+  let waterCups = 0;
+  for (let i = 0; i < drinksString.length; i += 1) {
+    if (Number.isInteger(parseInt(drinksString[i]))) {
+      waterCups += parseInt(drinksString[i]);
+    }
+  }
+  if (waterCups === 0) {
+    return 'Não é preciso beber água!';
+  } else if (waterCups === 1) {
+    return '1 copo de água';
+  } else {
+    return `${waterCups} copos de água`;
+  }
 };
 
 module.exports = hydrate;
