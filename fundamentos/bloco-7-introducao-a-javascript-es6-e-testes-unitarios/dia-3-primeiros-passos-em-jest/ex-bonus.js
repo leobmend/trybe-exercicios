@@ -42,7 +42,11 @@ const professionalBoard = [
 const searchEmployee = (id, detail) => {
   for (let i = 0; i < professionalBoard.length; i += 1) {
     if (professionalBoard[i].id === id) {
-      return professionalBoard[i][detail];
+      if (professionalBoard[i][detail] !== undefined) {
+        return professionalBoard[i][detail];
+      } else {
+        return "Informação indisponível.";
+      }
     }
   }
   return "ID não identificada." 

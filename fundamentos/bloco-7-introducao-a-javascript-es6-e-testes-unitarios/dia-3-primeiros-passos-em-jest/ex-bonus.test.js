@@ -15,4 +15,9 @@ describe('Teste a função searchEmployee.', () => {
   it('Testa se a função retorna "ID não identificada." se o id não for encontrado no quadro de funcionários.', () => {
     expect(searchEmployee('0000-0', 'firstName')).toBe('ID não identificada.');
   })
+
+  it('Testa se a função retorna "Informação indisponível." se a informação solicitada não existir.', () => {
+    expect(searchEmployee('9852-2-2', 'age')).toBe('Informação indisponível.');
+    expect(searchEmployee('4456-4', 'phoneNumber')).toBe('Informação indisponível.');
+  })
 });
