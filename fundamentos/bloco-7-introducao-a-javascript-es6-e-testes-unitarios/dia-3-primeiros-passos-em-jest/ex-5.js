@@ -7,8 +7,15 @@
     }
 */
 
-function techList() {
-
+function techList(list, name) {
+  const techObjList = [];
+  for (let i = 0; i < list.sort().length; i += 1) {
+    techObjList.push({
+      tech: list.sort()[i],
+      name,
+    })
+  }
+  return techObjList;
 };
 
 module.exports = techList;
