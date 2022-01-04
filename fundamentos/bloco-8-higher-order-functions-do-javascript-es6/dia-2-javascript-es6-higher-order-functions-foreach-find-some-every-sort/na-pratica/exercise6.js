@@ -62,11 +62,12 @@ const books = [
 ];
 
 /* 
-  5 - Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false , caso contrário.
+  6 - Faça uma função que retorne true , se algum livro foi lançado na década de 80, e false , caso contrário.
 */
 
-const xxCenturyVerify = booksList => {
-  return booksList.every(book => book.author.birthYear < 2001 && book.author.birthYear > 1900);
+
+const someBookWasReleaseOnThe80s = booksList => {
+  return booksList.some(book => book.releaseYear < 1990 && book.releaseYear >= 1980);
 }
 
-console.log(xxCenturyVerify(books));
+console.log(someBookWasReleaseOnThe80s(books));
