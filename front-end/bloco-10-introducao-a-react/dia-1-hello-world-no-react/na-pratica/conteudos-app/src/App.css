@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.header {
+  padding: 50px;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+.main {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.5vw;
+}
+
+.main div {
+  flex-basis: 22%;
+  min-width: px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgb(200,200,200);
+}
+
+.main div > * {
+  padding: 10px;
+}
+
+.footer {
+  padding: 20px;
+  font-size: 1.8vw;
+  text-align: center;
+}
