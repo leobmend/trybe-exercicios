@@ -8,7 +8,7 @@ class Order extends React.Component {
       <div className="order">
         <p> {user} bought {product} for {price.value} {price.currency} </p>
       </div>
-    );
+    )
   }
 }
 
