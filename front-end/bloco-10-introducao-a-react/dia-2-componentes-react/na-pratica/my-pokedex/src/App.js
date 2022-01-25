@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <div>
+        {pokemons.map((pokemon) => <Pokemon pokemon={pokemon} />)}
         <Pokemon pokemon={pokemons[0]} />
       </div>
     </div>
