@@ -3,18 +3,25 @@ import './App.css';
 
 const somethings = [ 'Something!', 'Sometthing!', 'Sommetthing!'];
 let index = 0;
-function consoleSomething() {
-  console.log(somethings[index]);
-  index += 1;
-}
 
 class App extends React.Component {
+  constructor() {
+    super();
+
+    this.consoleSomething = this.consoleSomething.bind(this);
+  }
+
+  consoleSomething(something) {
+    console.log(this)
+    console.log(something);
+  }
+
   render() {
     return (
       <div>
-        <button onClick={consoleSomething}>Click!</button>
-        <button onClick={consoleSomething}>Click!</button>
-        <button onClick={consoleSomething}>Click!</button>
+        {somethings.map((something) => 
+          <button onClick={() => this.consoleSomething(something)}>Click!</button>
+        )}
       </div>
     );
   }
