@@ -10,10 +10,10 @@ class Form extends React.Component {
       state: '',
     }
 
-    this.inputChangeHandler = this.inputChangeHandler.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  inputChangeHandler(event) {
+  handleChange(event) {
     this.setState({
        [event.target.name]: event.target.value,
     })
@@ -24,15 +24,16 @@ class Form extends React.Component {
       <form>
         <label>
           Nome:
-          <input type="text" name="name" value={this.state.name} onChange={this.inputChangeHandler} />
+          <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
         </label>
         <label>
           Ano de nascimento:
-          <input type="number" name="birthYear" value={this.state.birthYear} onChange={this.inputChangeHandler}/>
+          <input type="number" name="birthYear" value={this.state.birthYear} onChange={this.handleChange}/>
         </label>
         <label>
           Estado:
-          <select name="state">
+          <select name="state" value={this.state.state} onChange={this.handleChange}>
+            <option value=""></option>
             <option value="GO">Goiás</option>
             <option value="MT">Mato Grosso</option>
             <option value="MS">Mato Grosso do Sul</option>
