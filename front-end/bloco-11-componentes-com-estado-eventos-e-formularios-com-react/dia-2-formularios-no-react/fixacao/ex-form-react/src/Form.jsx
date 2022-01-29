@@ -52,6 +52,10 @@ class Form extends React.Component {
             onChange={this.handleChange}
           />
         </label>
+        <label>
+          Carregue seu currículo:
+          <input type="file" />
+        </label>
       </form>
     )
   }
