@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form label {
+  margin: 10px;
+}
+
+form select {
+  margin: 10px;
+}
+
+form input {
+  margin: 10px;
+}
