@@ -1,4 +1,5 @@
 import React from 'react';
+import Input from './Input';
 
 class Form extends React.Component {
   constructor() {
@@ -27,14 +28,10 @@ class Form extends React.Component {
       <form>
         <fieldset>
           <legend>Dados pessoais</legend>
-          <label>
-            Nome:
-            <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-          </label>
-          <label>
-            Ano de nascimento:
-            <input type="number" name="birthYear" value={this.state.birthYear} onChange={this.handleChange}/>
-          </label>
+          
+          <Input label="Nome" type="text" name="name" value={this.state.name} handleChange={this.handleChange} />
+          <Input label="Ano de nascimento" type="number" name="birthYear" value={this.state.birthYear} handleChange={this.handleChange} />
+         
           <label>
             Estado:
             <select name="state" value={this.state.state} onChange={this.handleChange}>
