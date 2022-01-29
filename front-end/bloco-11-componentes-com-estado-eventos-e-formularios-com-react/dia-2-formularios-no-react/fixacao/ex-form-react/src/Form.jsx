@@ -8,14 +8,17 @@ class Form extends React.Component {
       name: '',
       birthYear: '',
       state: '',
+      controlCheck: false,
     }
 
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  handleChange({ target }) {
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({
-       [event.target.name]: event.target.value,
+       [name]: value,
     })
   }
 
@@ -39,6 +42,15 @@ class Form extends React.Component {
             <option value="MS">Mato Grosso do Sul</option>
             <option value="TO">Tocantins</option>
           </select>
+        </label>
+        <label>
+          Sabe controlar os componentes React?
+          <input
+            name="controlCheck"
+            type="checkbox"
+            checked={this.state.controlCheck}
+            onChange={this.handleChange}
+          />
         </label>
       </form>
     )
