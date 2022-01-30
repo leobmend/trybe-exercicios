@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label {
+  margin: 10px;
+}
+
+input {
+  margin-left: 5px;
+}
+
+span {
+  margin-left: 5px;
+}

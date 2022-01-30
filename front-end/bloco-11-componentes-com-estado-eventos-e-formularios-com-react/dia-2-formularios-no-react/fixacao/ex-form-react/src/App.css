@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+form label {
+  margin: 10px;
+}
+
+form select {
+  margin: 10px;
+}
+
+form input {
+  margin: 10px;
+}
+
+form input:last-of-type {
+  border: 1px solid black;
+  border-radius: 3px;
+}
