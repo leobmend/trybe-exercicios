@@ -5,7 +5,15 @@
 form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;  
+}
+
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 90%;
 }
 
 form label {
@@ -18,4 +26,9 @@ form select {
 
 form input {
   margin: 10px;
+}
+
+form input:last-of-type {
+  border: 1px solid black;
+  border-radius: 3px;
 }

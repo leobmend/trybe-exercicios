@@ -10,10 +10,12 @@ class Form extends React.Component {
       birthYear: '',
       state: '',
       controlCheck: false,
+      errorControl: {},
     }
 
     this.handleChange = this.handleChange.bind(this);
   }
+
 
   handleChange({ target }) {
     const { name } = target;
@@ -28,10 +30,22 @@ class Form extends React.Component {
       <form>
         <fieldset>
           <legend>Dados pessoais</legend>
-          
-          <Input label="Nome" type="text" name="name" value={this.state.name} handleChange={this.handleChange} />
-          <Input label="Ano de nascimento" type="number" name="birthYear" value={this.state.birthYear} handleChange={this.handleChange} />
-         
+          <Input 
+            label="Nome" 
+            type="text" 
+            maxLength={10} 
+            name="name" 
+            value={this.state.name} 
+            handleChange={this.handleChange} 
+          />
+          <Input 
+            label="Ano de nascimento" 
+            type="number" 
+            maxLength={10} 
+            name="birthYear" 
+            value={this.state.birthYear} 
+            handleChange={this.handleChange} 
+          />
           <label>
             Estado:
             <select name="state" value={this.state.state} onChange={this.handleChange}>
