@@ -10,19 +10,34 @@ class Form extends React.Component {
       birthYear: '',
       state: '',
       controlCheck: false,
-      errorControl: {},
+      formWithError: true,
     }
 
     this.handleChange = this.handleChange.bind(this);
   }
 
+  handleError() {
+    const { name, birthYear, state } = this.state;
+
+    const errorCases = [
+      (!name.length || name.length > 100),
+      (!birthYear.length || parseInt(birthYear) > 2022),
+      !state.length,
+    ];
+
+    const formWithError = errorCases.some((error) => error === true);
+
+    this.setState({
+      formWithError: formWithError,
+    });
+  }
 
   handleChange({ target }) {
     const { name } = target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const value = (target.type === 'checkbox') ? target.checked : target.value;
     this.setState({
-       [name]: value,
-    })
+      [name]: value,
+    }, () => { this.handleError(); });
   }
 
   render() {
@@ -33,7 +48,7 @@ class Form extends React.Component {
           <Input 
             label="Nome" 
             type="text" 
-            maxLength={10} 
+            maxLength={100} 
             name="name" 
             value={this.state.name} 
             handleChange={this.handleChange} 
@@ -41,7 +56,7 @@ class Form extends React.Component {
           <Input 
             label="Ano de nascimento" 
             type="number" 
-            maxLength={10} 
+            maxLength={4} 
             name="birthYear" 
             value={this.state.birthYear} 
             handleChange={this.handleChange} 
