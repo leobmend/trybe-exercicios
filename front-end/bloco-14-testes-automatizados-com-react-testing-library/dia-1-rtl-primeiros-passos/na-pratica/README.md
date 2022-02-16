@@ -1,3 +1,3 @@
 # Aviso aos navegantes!
 
-A pasta contida neste diretório (best_games) **não tem conteúdo** pois na verdade faz referência a um outro repositório, indicado como exercício no dia 2 do bloco 12. [Clique aqui](https://github.com/tryber/best_games) para ir até o repositório em questão!
+As pastas contidas neste diretório ([best_games](https://github.com/leobmend/best_games), [exercise-todo-list](https://github.com/leobmend/exercise-todo-list)) **não têm conteúdo** pois na verdade fazem referência a outros repositórios, indicado como exercícios no dia 1 do bloco 14.
