@@ -43,7 +43,7 @@ describe('3. Testando implementações da função randomNumber', () => {
 
 describe('4. Testando implementações para as funções de string', () => {
   it('Testa o mock da função upperCaseString que retorna a string em caixa baixa', () => {
-    const mockUpperCaseString = jest.spyOn(service, "upperCaseString" ).mockImplementation(string => string.toLowerCase());    
+    const mockUpperCaseString = jest.spyOn(service, 'upperCaseString' ).mockImplementation(string => string.toLowerCase());    
     expect(mockUpperCaseString('LALALAND')).toBe('lalaland');
     expect(service.upperCaseString).toHaveBeenCalled();
     expect(service.upperCaseString).toHaveBeenCalledTimes(1);
@@ -69,5 +69,26 @@ describe('4. Testando implementações para as funções de string', () => {
   it('Testa a restauração da função upperCaseString', () => {
     service.upperCaseString.mockRestore();
     expect(service.upperCaseString('lalaland')).toBe('LALALAND')
+  });
+})
+
+describe('5. Testando função de fetch', () => {
+  service.fetchDog = jest.fn();
+  afterEach(service.fetchDog.mockReset);
+
+  it('Testa o mock da função fetch no caso de resolve', async () => {
+    service.fetchDog.mockResolvedValue('request success');
+    service.fetchDog();
+    expect(service.fetchDog).toHaveBeenCalled();
+    expect(service.fetchDog).toHaveBeenCalledTimes(1);
+    await expect(service.fetchDog()).resolves.toBe('request success');
+    expect(service.fetchDog).toHaveBeenCalledTimes(2);
+  });
+
+  test('Testa o mock da função fetch no caso de reject', async () => {
+    service.fetchDog.mockRejectedValue('request failed');
+    expect(service.fetchDog).toHaveBeenCalledTimes(0);
+    await expect(service.fetchDog()).rejects.toMatch('request failed');
+    expect(service.fetchDog).toHaveBeenCalledTimes(1);
   });
 })
