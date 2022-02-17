@@ -1,7 +1,17 @@
 const randomNumber = () => {
-  return (Math.random()*100).toFixed(0)
+  return (Math.random()*100).toFixed(0);
 }
 
-console.log(randomNumber())
+const upperCaseString = (string) => {
+  return string.toUpperCase();
+}
 
-module.exports = { randomNumber };
+const firstLetter = (string) => {
+  return string[0];
+}
+
+const concatenateStrings = (string1, string2) => {
+  return string1 + string2;
+}
+
+module.exports = { randomNumber, upperCaseString, firstLetter, concatenateStrings };
