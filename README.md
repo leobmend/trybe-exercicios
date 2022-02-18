@@ -22,11 +22,11 @@ The course is divided into four modules.
 	- [x] Asynchrony on JavaScript and Tests.
 
 * Module 02 - Front-end
-	- [ ] React introduction;
-	- [ ] Components: State, Events and Forms with React;
-	- [ ] Life Cycle of Components and React Router;
-	- [ ] Agile Metodologies;
-	- [ ] Automatic Tests with React Testing Library;
+	- [x] React introduction;
+	- [x] Components: State, Events and Forms with React;
+	- [x] Life Cycle of Components and React Router;
+	- [x] Agile Metodologies;
+	- [x] Automatic Tests with React Testing Library;
 	- [ ] State Management with Redux;
 	- [ ] Project: Trivia Game;
 	- [ ] API Context and React Hooks;
