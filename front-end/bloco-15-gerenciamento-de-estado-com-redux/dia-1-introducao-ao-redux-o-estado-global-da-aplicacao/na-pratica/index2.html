@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Informações do primeiro Reducer:</h1>
+      <p>Nome: <span id="nome-1">Rodrigo</span></p>
+      <p>Sobrenome: <span id="sobrenome-1">Santos da Silva</span></p>
+      <p>Endereço: <span id="endereco-1">Rua Soldado Mathias, 765</span></p>
+      <p>Cidade: <span id="cidade-1">Belo Horizonte</span></p>
+    </div>
+    <div id="container">
+      <h1>Informações do segundo Reducer:</h1>
+      <p>Nome: <span id="nome-2">Bruna</span></p>
+      <p>Sobrenome: <span id="sobrenome-2">Santana Oliveira</span></p>
+      <p>Endereço: <span id="endereco-2">Rua Holanda, 332</span></p>
+      <p>Cidade: <span id="cidade-2">São Paulo</span></p>
+    </div>
+    <script>
+      const INITIAL_STATE_1 = {
+        name: 'Rodrigo',
+        lastName: 'Santos da Silva',
+        address: 'Rua Soldado Mathias, 765',
+        city: 'Belo Horizonte',
+      };
+
+      const INITIAL_STATE_2 = {
+        name: 'Bruna',
+        lastName: 'Santana Oliveira',
+        address: 'Rua Holanda, 332',
+        city: 'São Paulo',
+      };
+
+      const myFirstReducer = (state = INITIAL_STATE_1, action) => {
+        switch (action.type) {
+          case 'CHANGE_NAME_FIRST_REDUCER':
+            return {
+              ...state,
+              name: action.name,
+              lastName: action.lastName,
+            }
+          default:
+            return state;
+        }
+      };
+
+      const mySecondReducer = (state = INITIAL_STATE_2, action) => {
+        switch (action.type) {
+          case 'CHANGE_NAME_SECOND_REDUCER':
+            return {
+                ...state,
+                name: action.name,
+                lastName: action.lastName,
+              }
+          default:
+            return state;
+        }
+      };
+
+      const combinedReducers = Redux.combineReducers({
+        myFirstReducer,
+        mySecondReducer,
+      });
+
+      const nameChanger1 = (name, lastName) => ({
+        type: 'CHANGE_NAME_FIRST_REDUCER',
+        name,
+        lastName,
+      });
+
+      const nameChanger2 = (name, lastName) => ({
+        type: 'CHANGE_NAME_SECOND_REDUCER',
+        name,
+        lastName,
+      });
+
+      const store = Redux.createStore(
+        combinedReducers,
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()  
+      );
+
+      store.subscribe(() => {
+        const { myFirstReducer: { name: firstName, lastName: firstLastName },
+          mySecondReducer: { name: secondName, lastName: secondLastName } } = store.getState();
+
+        const firstNameP = document.querySelector('body').firstElementChild.firstElementChild
+          .nextElementSibling;
+        firstNameP.innerText = `Nome: ${firstName}`;
+
+        const firstLastNameP = firstNameP.nextElementSibling;
+        firstLastNameP.innerText = `Sobrenome: ${firstLastName}`;
+
+        const secondNameP = document.querySelector('body').firstElementChild.nextElementSibling
+          .firstElementChild.nextElementSibling;
+        secondNameP.innerText = `Nome: ${secondName}`;
+
+        const secondLastNameP = secondNameP.nextElementSibling;
+        secondLastNameP.innerText = `Sobrenome: ${secondLastName}`;
+      });
+
+      window.onload = () => {
+        setTimeout(() => {
+          store.dispatch(nameChanger1('Leonardo', 'Mendonça'));
+          store.dispatch(nameChanger2('Amanda', 'Khouri'));
+        }, 1500);
+      };
+    </script>
+  </body>
+</html>
