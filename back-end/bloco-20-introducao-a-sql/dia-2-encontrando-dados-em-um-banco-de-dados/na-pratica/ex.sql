@@ -108,4 +108,4 @@ SELECT * FROM Projects
 ORDER BY Hours
 LIMIT 5;
 -- Escreva uma query que exiba a string "Existem Number cientistas na tabela Scientists.", em que Number se refira a quantidade de cientistas.
--- SELECT CONCAT('Existem ', COUNT(Name), ' cientistas na tabela Scientsts') AS Resultado FROM Scientists;
+SELECT CONCAT('Existem ', CAST(COUNT(Name) AS CHAR(10)), ' cientistas na tabela Scientsts') AS Resultado FROM Scientists;
