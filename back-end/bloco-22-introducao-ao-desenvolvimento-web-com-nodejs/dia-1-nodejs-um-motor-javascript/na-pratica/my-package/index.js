@@ -1,6 +1,6 @@
 const readline = require('readline-sync');
 
-const scriptList = ['imc', 'speed', 'raffle'];
+const scriptList = ['imc', 'speed', 'raffle', 'factorial', 'fibonacci'];
 
 const scriptToUse = readline.questionInt(
   scriptList.reduce((question, script, index) => (
