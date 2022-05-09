@@ -3,10 +3,9 @@ const readline = require('readline-sync');
 const scriptList = ['imc', 'speed', 'raffle'];
 
 const scriptToUse = readline.questionInt(
-  'Qual o script que deseja utilizar?\n' +
-  '1. imc\n' +
-  '2. speed\n' +
-  '3. raffle\n'
+  scriptList.reduce((question, script, index) => (
+    question + `${index + 1}. ${script}\n`
+  ), 'Qual o script que deseja utilizar?\n')
 );
   
 require(`./${scriptList[scriptToUse - 1]}.js`);
