@@ -6,7 +6,7 @@ import { readFile } from '../index.js';
 
 const FILE_CONTENT = 'My text to test.';
 
-describe('leArquivo', () => {
+describe('readFile', () => {
   describe('Quando o arquivo existe', () => {
     before(() => {
       sinon.stub(fs, 'readFileSync').returns(FILE_CONTENT);
