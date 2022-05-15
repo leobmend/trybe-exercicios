@@ -1,8 +1,19 @@
 import express from 'express';
 
 import { getSimpsons, setSimpsons } from '../utils/fs-simpsons.js';
+import generateToken from '../utils/crypto-token.js';
 
 const routes = express.Router();
+
+routes.post('/signup', (req, res) => {
+  const { email, password, firstName, phone } = req.body;
+  console.log(email, password, firstName, phone)
+  if ([email, password, firstName, phone].includes(undefined)) {
+    return res.status(401).json({ message: 'Missing fields'});
+  }
+
+  res.status(200).json({ token: generateToken() })
+});
 
 routes.get('/simpsons', async function(req, res) {
   try {
@@ -48,11 +59,5 @@ routes.post('/simpsons', async function(req, res) {
     res.status(500).end();
   }
 })
-
-/* routes.post('/greetings', function(req, res) {
-  const { name, age } = req.body;
-  if (age <= 17) return res.status(401).json({ message: "Unauthorized" });
-  res.status(200).json({ message: `Seu nome é ${name} e você tem ${age} anos de idade` });
-}); */
 
 export default routes;
