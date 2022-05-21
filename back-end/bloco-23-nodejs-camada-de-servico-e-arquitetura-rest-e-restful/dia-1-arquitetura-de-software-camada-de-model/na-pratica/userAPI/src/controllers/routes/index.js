@@ -29,7 +29,7 @@ routes.get(
   rescue(async (req, res, _next) => {
     const { id } = req.params;
 
-    const user = await UserService.getById(id);
+    const user = await UserService.getById(parseInt(id));
 
     res.status(200).json(user);
   }),
@@ -41,7 +41,7 @@ routes.put(
     const { id } = req.params;
     const { firstName, lastName, email, password } = req.body;
 
-    const user = await UserService.updateById(id, firstName, lastName, email, password);
+    const user = await UserService.updateById(parseInt(id), firstName, lastName, email, password);
 
     res.status(200).json(user);
   }),
@@ -52,7 +52,7 @@ routes.delete(
   rescue(async (req, res, _next) => {
     const { id } = req.params;
 
-    await UserService.removeById(id);
+    await UserService.removeById(parseInt(id));
 
     res.status(200).json({ message: 'Usuário deletado com sucesso' });
   }),
