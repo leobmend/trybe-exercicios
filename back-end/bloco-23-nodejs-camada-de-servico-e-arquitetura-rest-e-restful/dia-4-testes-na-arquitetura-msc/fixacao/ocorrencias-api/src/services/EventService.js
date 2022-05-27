@@ -19,7 +19,7 @@ const getAll = async () => {
   
   const eventsPromises = events.map(async (event) => {
     const [address] = await AddressModel.getById(event.idEndereco);
-    
+
     return {
       ...event,
       endereco: address,

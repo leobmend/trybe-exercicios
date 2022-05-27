@@ -1,6 +1,6 @@
 const EventService = require('../services/EventService');
 
-const getAll = async (req, res, next) => {
+const getAll = async (_req, res, next) => {
   try {
     const events = await EventService.getAll();
 
@@ -15,7 +15,6 @@ const getById = async (req, res, next) => {
     const { id } = req.params;
 
     const event = await EventService.getById(parseInt(id));
-    console.log(event)
 
     res.status(200).json(event);
   } catch (err) {

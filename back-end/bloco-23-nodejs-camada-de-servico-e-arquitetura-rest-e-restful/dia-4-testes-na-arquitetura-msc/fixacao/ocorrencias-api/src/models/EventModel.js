@@ -19,7 +19,7 @@ const getAll = async () => {
 const getById = async (id) => {
   const [event] = await connection.execute(
     'SELECT * FROM `ocorrencias-cidade`.ocorrencias ' +
-    'WHERE = ?;',
+    'WHERE id_ocorrencia = ?;',
     [id],
   );
 

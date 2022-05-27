@@ -26,7 +26,7 @@ const add = async (endereco) => {
 const getById = async (id) => {
   const [address] = await connection.execute(
     'SELECT * FROM `ocorrencias-cidade`.endereco ' +
-    'WHERE = ?;',
+    'WHERE id_endereco = ?;',
     [id],
   );
 

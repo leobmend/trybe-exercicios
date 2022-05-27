@@ -5,17 +5,17 @@ const EventController = require('../controllers/EventController');
 const error = require('../controllers/middlewares/error');
 
 events.get(
-  '/',
+  '/ocorrencias',
   EventController.getAll,
 );
 
 events.get(
-  '/:id',
+  '/ocorrencias/:id',
   EventController.getById,
 );
 
 events.post(
-  '/',
+  '/ocorrencias',
   EventController.add,
 );
 
