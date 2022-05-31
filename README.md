@@ -27,12 +27,27 @@ The course is divided into four modules.
 	- [x] Life Cycle of Components and React Router;
 	- [x] Agile Metodologies;
 	- [x] Automatic Tests with React Testing Library;
-	- [ ] State Management with Redux;
-	- [ ] Project: Trivia Game;
-	- [ ] API Context and React Hooks;
-	- [ ] Project: Recipes App; 
+	- [x] State Management with Redux;
+	- [x] Project: Trivia Game;
+	- [x] API Context and React Hooks;
+	- [x] Project: Recipes App; 
 	
 * Module 03 - Back-end (under construction)
+	- [x] Docker: Using containers;
+	- [x] Introduction to SQL;
+	- [x] SQL Functions, JOINs and Normalization;
+	- [x] Introduction to Web Developmento with Node.js;
+	- [x] Node.js: Service Layer and REST/RESTfull architecture;
+	- [ ] Node.js: ORM and authentication;
+	- [ ] Deployment;
+	- [ ] TypeScript;
+	- [ ] Object-oriented programming (OOP) and SOLID;
+	- [ ] Project: TSC - Trybe Soccer Club
+	- [ ] Introduction to MongoDB
+	- [ ] MongoDB with Node.js and OOP
+	- [ ] Project: Delivery App;
+	- [ ] MasterClass - VPS, CI/CD 
+
 * Module 04 - Computer Science (under construction)
 
 ## This space
@@ -42,4 +57,5 @@ This repository is meant to keep all exercises done throughout the course, organ
 ## Talk to me
 
 If you wanna know more about my journey on Trybe, discuss an exercise or anything else, feel free to reach me at:
+
 [<img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white" />](https://www.linkedin.com/in/leonardobmendonca/) [<img src="https://img.shields.io/badge/Gmail-red?style=flat-square&logo=Gmail&logoColor=white" />](mailto:leo.bmendonca@gmail.com)
