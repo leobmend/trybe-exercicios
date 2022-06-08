@@ -26,3 +26,24 @@
 > Exercício 7: No controller BooksController crie o método getById sendo um middleware que recebe o id como parâmetro de rota e buscar o livro por meio do service. Se o livro não existir a resposta da requisição deve ter o status 404 e o json { "message": "Book not found" }.
 
 > Exercício 8: Vincule a rota GET /books/:id para acessar seu controller.
+
+> Exercício 9: No service BooksService crie um método create que recebe um objeto com os atributos title, author, pageQuantity e salve um novo livro utilizando o model Book.
+
+> Exercício 10: No controller BooksController crie o método create sendo um middleware que recebe os atributos title, author, pageQuantity do body da requisição e salve os dados por meio do service.
+
+> Exercício 11: Vincule a rota POST /books para acessar seu controller.
+
+> Exercício 12: No service BooksService crie um método update que recebe dois parâmetros: o id do livro a ser alterado e um objeto com os atributos title, author, pageQuantity e atualize o livro utilizando o model Book.
+
+> Exercício 13: No controller BooksController crie o método update sendo um middleware que recebe o id como parâmetro de rota e os atributos title, author, pageQuantity do body da requisição e salve os dados por meio do service. A requisição deve retornar o status 200 e a mensagem 'Book updated!'. Se o livro não for encontrado retornar a mensagem 'Book not found!'.
+
+> Exercício 14: Vincule a rota PUT /books/:id para acessar seu controller.
+
+> Exercício 15: No service BooksService crie um método remove que recebe o id do livro a ser removido e remova o mesmo utilizando o model Book.
+
+> Exercício 16: No controller BooksController crie o método remove sendo um middleware que recebe o id como parâmetro de rota e remova o livro por meio do service.
+
+> Exercício 17: Vincule a rota DELETE /books/:id para acessar seu controller.
+* Faça um teste no insomnia para ver se o endpoint está funcional.
+Em caso de erro, os endpoints devem retornar status code 500 com a mensagem: 'Algo deu errado'.
+* Dica: Para testar suas requisições você pode utilizar o Postman ou o Insomnia.
