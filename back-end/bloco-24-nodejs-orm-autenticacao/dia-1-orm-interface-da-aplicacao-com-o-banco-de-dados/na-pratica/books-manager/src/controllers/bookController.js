@@ -2,8 +2,21 @@ const rescue = require('express-rescue');
 
 const bookService = require('../services/bookService');
 
-const getAll = rescue(async (_req, res, _next) => {
-  const books = await bookService.getAll();
+const getAll = rescue(async (req, res, _next) => {
+  const { author } = req.query;
+
+  let books = [];
+
+  if (!author) books = await bookService.getAll();
+  else books = await bookService.getByAuthor(author);
+
+  res.status(200).json(books);
+});
+
+const getByAuthor = rescue(async (req, res, _next) => {
+  const { author } = req.params;
+
+  const books = await bookService.getByAuthor(author);
 
   res.status(200).json(books);
 });
@@ -15,6 +28,8 @@ const getById = rescue(async (req, res, _next) => {
 
   res.status(200).json(book);
 });
+
+
 
 const create = rescue(async (req, res, _next) => {
   const { title, author, pageQuantity } = req.body;
@@ -44,6 +59,7 @@ const remove = rescue( async (req, res, _next) => {
 const bookController = {
   getAll,
   getById,
+  getByAuthor,
   create,
   update,
   remove,
