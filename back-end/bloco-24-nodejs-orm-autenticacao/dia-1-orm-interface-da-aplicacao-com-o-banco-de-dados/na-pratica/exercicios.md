@@ -44,6 +44,17 @@
 > Exercício 16: No controller BooksController crie o método remove sendo um middleware que recebe o id como parâmetro de rota e remova o livro por meio do service.
 
 > Exercício 17: Vincule a rota DELETE /books/:id para acessar seu controller.
+
 * Faça um teste no insomnia para ver se o endpoint está funcional.
 Em caso de erro, os endpoints devem retornar status code 500 com a mensagem: 'Algo deu errado'.
 * Dica: Para testar suas requisições você pode utilizar o Postman ou o Insomnia.
+
+> Bônus
+
+* Crie um seeder usando o Sequelize-CLI, populando a sua base com pelo menos um livro;
+* Crie um método getByAuthor em BooksService para buscar uma lista de livros por author.
+* Refatore o método getAll de forma que ser for enviado uma query string author ele seja capaz de pegar a lista usando o método getByAuthor de BooksService.
+* Refatore os métodos getAll e getByAuthor para que a lista de livros seja ordenada pelo título em ordem alfabética.
+* Crie uma migration para adicionar a coluna publisher (editora) na tabela Books. Modifique as camadas de serviço para que esse campo seja utilizado no cadastro e na edição.
+* Escreva testes unitários para o model;
+* Escreva testes unitários para o service criado, isolando a camada de models;
