@@ -1,4 +1,15 @@
+const jwt = require('jsonwebtoken');
 const { User } = require('../models');
+
+const secret = 'a';
+const jwtConfig = {
+  expiresIn: '7d',
+  algorithm: 'HS256',
+};
+
+const generateToken = (user) => (
+  jwt.sign({ data: user }, secret, jwtConfig)
+);
 
 const validateBody = (body, res) => {
   const { username, password } = body;
@@ -26,7 +37,11 @@ module.exports = async (req, res) => {
         .status(401)
         .json({ message: 'Usuário não existe ou senha inválida' });
     }
-    return res.status(200).json({ message: 'Login efetuado com sucesso' });
+    
+    return res.status(200).json({
+      message: 'Login efetuado com sucesso', 
+      token: generateToken(user),
+    });
   } catch (err) {
     return res
       .status(500)
