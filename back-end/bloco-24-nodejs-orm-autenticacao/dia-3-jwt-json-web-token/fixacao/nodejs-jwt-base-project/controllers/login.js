@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const { User } = require('../models');
 
-const secret = 'a';
+const secret = 'xablauzito';
 const jwtConfig = {
   expiresIn: '7d',
   algorithm: 'HS256',
