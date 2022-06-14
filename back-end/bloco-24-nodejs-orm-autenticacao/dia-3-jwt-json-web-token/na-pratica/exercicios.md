@@ -107,3 +107,38 @@ Antes de começar, crie um novo projeto chamado hello-jwt utilizando o comando n
 ```
 
 * Para validar se a pessoa é admin, crie um novo _middleware_ no arquivo `middlewares/admin.js`.
+
+# Bônus
+
+> 1. Crie o endpoint POST /signup
+
+* O endpoint deve aceitar o seguinte JSON no corpo da requisição:
+
+``` 
+    {
+      "username": "MariaCecília_Souza92",
+      "password": "%9!%e"c0c5w,q%%h9n3k"
+    }
+```
+
+* Para validar os campos, considere os mesmos critérios do endpoint `POST /login`.
+* Caso `username` já exista, retorne o status `409 Conflict` e o seguinte JSON:
+
+```
+    {
+      "error": { "message": "user already exists" }
+    }
+```
+
+* Após armazenar os novos dados, retorne um _token_ que expire em uma hora e contenha `username` e `admin` no _payload_. Utilize o seguinte formato na resposta:
+
+```
+    {
+      "token": "<token gerado aqui>"
+    }
+```
+
+> 2. Crie a rota PUT /users/:username
+
+* Permite a alteração de um usuário específico para admin.
+* Deve ser acessável apenas para usuários admin.
