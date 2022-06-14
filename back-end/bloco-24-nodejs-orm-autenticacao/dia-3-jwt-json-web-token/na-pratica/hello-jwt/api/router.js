@@ -8,6 +8,8 @@ const auth = require('../middlewares/auth');
 const adminCheck = require('../middlewares/adminCheck');
 
 apiRouter.post('/login', validateLogin, UserController.login);
+apiRouter.post('/sign-up', validateLogin, UserController.signUp);
+apiRouter.put('/users/:username', auth, UserController.manageAdmin);
 apiRouter.get('/users/me', auth, UserController.getByUsername);
 apiRouter.get('/secret-info', auth, adminCheck, UserController.secretPage);
 

@@ -1,7 +1,7 @@
 const rescue = require('express-rescue');
 
 const validateLogin = rescue((req, _res, next) => {
-  const { username, password } = req.body;
+  const { username, password, fullname, age } = req.body;
 
   if (!username) throw { message: 'Username is required' };
   if (!password) throw { message: 'Password is required' };
@@ -9,7 +9,7 @@ const validateLogin = rescue((req, _res, next) => {
   if (username.length < 5) throw { message: 'Username must have at least 5 characters' };
   if (password.length < 5) throw { message: 'Password must have at least 5 characters' };
 
-  req.user = { username, password };
+  req.user = { username, password, fullname, age };
 
   next();
 });
