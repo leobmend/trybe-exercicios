@@ -1,0 +1,4 @@
+use('bancoTeste');
+
+db.bios.findOne({ _id: 8 }, { name: 1 });
+

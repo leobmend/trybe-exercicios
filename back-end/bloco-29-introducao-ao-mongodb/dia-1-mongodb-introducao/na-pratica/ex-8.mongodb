@@ -1,0 +1,3 @@
+use('bancoTeste');
+
+db.books.countDocuments({ status: 'PUBLISH' });
