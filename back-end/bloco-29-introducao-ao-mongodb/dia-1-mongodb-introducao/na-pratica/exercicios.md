@@ -26,7 +26,7 @@ Para importar:
 
 ```
 $ docker cp books.json personal-mongo:/tmp/books.json
-$ docker exec personal-mongo mongoimport -d bancoTeste -c books --file /tmp/books.json
+$ docker exec personal-mongo mongoimport -d bancoTeste -c books --file /tmp/books.json -u "username" -p "password" --authenticationDatabase admin
 ```
 
 ## Exercício 7:

@@ -1,0 +1,5 @@
+use('bancoTeste');
+
+db.superheroes.find(
+  { 'aspects.eyeColor': 'green' }
+)
