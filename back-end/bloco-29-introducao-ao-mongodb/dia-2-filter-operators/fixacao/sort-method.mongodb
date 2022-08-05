@@ -1,0 +1,7 @@
+use('bancoTeste');
+
+// Descomente a linha desejada
+
+// db.restaurants.find().sort({ name: 1 })
+
+db.restaurants.find().sort({ rating: -1 })

@@ -1,0 +1,31 @@
+use('bancoTeste');
+
+// Descomente a linha desejada
+
+// db.restaurants.countDocuments({ $or: [
+//   { rating: { $not: { $lte: 5 } } },
+//   { rating: { $exists: false } }
+// ]})
+
+// db.restaurants.countDocuments({ $or: [
+//   { rating: { $gte: 6 } },
+//   { borough: 'Brooklyn' }
+// ]})
+
+// db.restaurants.countDocuments({
+//   borough: { $in: ['Queens', 'Staten Island', 'Brooklyn' ] },
+//   rating: { $gt: 4 }  
+// })
+
+// db.restaurants.countDocuments({ $nor: [
+//   { rating: 1 },
+//   { cuisine: 'American' }
+// ]})
+
+db.restaurants.countDocuments({ $or: [
+  { $and: [
+    { rating: { $gt: 6 } },
+    { rating: { $lt: 10} }
+  ]},
+  { cuisine: { $ne: 'Delicatessen' } }
+]})
