@@ -1,0 +1,13 @@
+use('bancoTeste');
+
+// db.superheroes.countDocuments({
+//   $and: [
+//     { 'aspects.height': { $in: [180, 200] } },
+//     { publisher: 'Marvel Comics' }
+//   ]
+// })
+
+db.superheroes.find({ 
+  'aspects.height': { $in: [180, 200] },
+  publisher: 'Marvel Comics' 
+})

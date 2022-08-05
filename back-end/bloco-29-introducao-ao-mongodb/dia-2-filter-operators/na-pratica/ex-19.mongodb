@@ -1,0 +1,5 @@
+use('bancoTeste');
+
+db.superheroes.deleteMany({
+  publisher: 'George Lucas'
+})

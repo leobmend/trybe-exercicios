@@ -1,0 +1,5 @@
+use('bancoTeste');
+
+db.superheroes.countDocuments({
+  'aspects.hairColor': { $exists: 1 }
+})

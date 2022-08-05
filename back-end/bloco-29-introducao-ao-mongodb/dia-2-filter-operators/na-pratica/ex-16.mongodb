@@ -1,0 +1,5 @@
+use('bancoTeste');
+
+db.superheroes.countDocuments({
+  race: { $exists: 0 }
+})

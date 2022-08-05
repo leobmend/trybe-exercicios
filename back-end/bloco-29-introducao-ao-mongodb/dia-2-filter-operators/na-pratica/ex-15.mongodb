@@ -1,0 +1,8 @@
+use('bancoTeste');
+
+db.superheroes.find({ $and: [
+  { 'aspects.weight': { $gte: 80 } }, 
+  { 'aspects.weight': { $lte: 100 } },
+  { race: 'Human' },
+  { publisher: { $ne: 'DC Comics' } }
+]})
