@@ -38,12 +38,12 @@ The course is divided into four modules.
 	- [x] SQL Functions, JOINs and Normalization;
 	- [x] Introduction to Web Developmento with Node.js;
 	- [x] Node.js: Service Layer and REST/RESTfull architecture;
-	- [ ] Node.js: ORM and authentication;
-	- [ ] Deployment;
-	- [ ] TypeScript;
-	- [ ] Object-oriented programming (OOP) and SOLID;
-	- [ ] Project: TSC - Trybe Soccer Club
-	- [ ] Introduction to MongoDB
+	- [x] Node.js: ORM and authentication;
+	- [x] Deployment;
+	- [x] TypeScript;
+	- [x] Object-oriented programming (OOP) and SOLID;
+	- [x] Project: TSC - Trybe Soccer Club
+	- [x] Introduction to MongoDB
 	- [ ] MongoDB with Node.js and OOP
 	- [ ] Project: Delivery App;
 	- [ ] MasterClass - VPS, CI/CD 
