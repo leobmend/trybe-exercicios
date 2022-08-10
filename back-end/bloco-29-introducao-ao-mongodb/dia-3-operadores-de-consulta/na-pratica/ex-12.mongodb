@@ -1,0 +1,8 @@
+use('cinema');
+
+db.movies.find(
+  { 
+    description: { $regex: /^The/ }
+  },
+  { title: 1, description: 1, _id: 0 }
+);
