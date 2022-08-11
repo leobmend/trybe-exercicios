@@ -1,0 +1,6 @@
+use('bancoTeste');
+
+db.movies.updateMany(
+  { title: { $in: ['Home Alone', 'Batman'] } },
+  { $inc: { budget: 5 } }  
+)

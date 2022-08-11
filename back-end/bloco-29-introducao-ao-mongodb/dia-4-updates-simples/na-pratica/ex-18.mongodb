@@ -1,0 +1,6 @@
+use('bancoTeste');
+
+db.xmen.updateMany(
+  { class: { $exists: 0 } },
+  { $inc: { power: -100 } }
+)

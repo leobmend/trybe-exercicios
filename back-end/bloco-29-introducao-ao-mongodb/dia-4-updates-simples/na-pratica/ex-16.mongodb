@@ -1,0 +1,6 @@
+use('bancoTeste');
+
+db.xmen.updateMany(
+  { class: { $in: ['gama', 'omega'] } },
+  { $max: { power: 500 } }
+)
