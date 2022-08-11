@@ -1,0 +1,6 @@
+use('bancoTeste');
+
+db.movies.updateMany(
+  { },
+  { $set: { sequels: 0 } }  
+)

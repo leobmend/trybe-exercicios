@@ -1,0 +1,9 @@
+use('bancoTeste');
+
+db.xmen.updateMany(
+  { 
+    occupation: 'Junior Staff',
+    areas: { $exists: 0 }
+  },
+  { $set: { areas: ['Outside'] } }
+)
