@@ -1,0 +1,19 @@
+use('bancoTeste');
+
+db.movies.updateOne(
+  { title: 'Batman' },
+  { 
+    $set: { 
+      'cast.$[elem1].actor': 'Christian Bale',
+      'cast.$[elem2].actor': 'Michael Caine',
+      'cast.$[elem3].actor': 'Heath Ledger',
+    }
+  },
+  { 
+    arrayFilters: [
+      { 'elem1.character': 'Batman'},
+      { 'elem2.character': 'Alfred'},
+      { 'elem3.character': 'Coringa'},      
+    ]
+  }
+);

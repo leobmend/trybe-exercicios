@@ -1,0 +1,14 @@
+use('bancoTeste');
+
+db.movies.updateOne(
+  { title: 'Batman' },
+  {
+    $set: { 'cast.$[elem].actor': [
+      'Christian Bale',
+      'Michael Keaton',
+      'Val Kilmer',
+      'George Clooney'
+    ] } 
+  },
+  { arrayFilters: [{ 'elem.character': 'Batman'}] }
+);
