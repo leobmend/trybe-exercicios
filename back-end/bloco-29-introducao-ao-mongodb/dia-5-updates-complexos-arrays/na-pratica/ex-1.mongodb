@@ -1,0 +1,6 @@
+use('bancoTeste');
+
+db.movies.updateOne(
+  { title: 'Batman' },
+  { $push: { category: 'superhero' } }
+);

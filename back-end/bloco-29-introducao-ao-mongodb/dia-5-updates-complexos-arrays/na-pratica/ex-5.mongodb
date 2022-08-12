@@ -1,0 +1,8 @@
+use('bancoTeste');
+
+db.movies.updateOne(
+  { title: 'Batman' },
+  { 
+    $pop: { category: 1 }
+  }
+);
