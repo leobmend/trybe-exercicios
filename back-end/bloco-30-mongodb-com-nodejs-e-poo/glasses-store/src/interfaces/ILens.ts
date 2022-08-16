@@ -1,3 +1,4 @@
+import { Request } from 'express';
 import { z } from 'zod';
 
 const lensZodSchema = z.object({
@@ -9,3 +10,6 @@ type ILens = z.infer<typeof lensZodSchema>;
 
 export default ILens;
 export { lensZodSchema };
+export interface RequestLens extends Request {
+  body: ILens,
+}

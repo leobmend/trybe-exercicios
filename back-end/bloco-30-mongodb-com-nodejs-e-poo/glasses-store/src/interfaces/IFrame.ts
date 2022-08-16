@@ -1,3 +1,4 @@
+import { Request } from 'express';
 import { z } from 'zod';
 
 const FrameZodSchema = z.object({
@@ -11,3 +12,6 @@ type IFrame = z.infer<typeof FrameZodSchema>;
 
 export default IFrame;
 export { FrameZodSchema };
+export interface RequestFrame extends Request {
+  body: IFrame,
+}

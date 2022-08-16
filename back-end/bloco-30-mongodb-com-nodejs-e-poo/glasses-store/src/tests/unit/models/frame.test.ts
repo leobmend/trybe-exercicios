@@ -70,13 +70,13 @@ describe('Frame Model', () => {
 
 	describe('deleting a frame', () => {
 		it('successfully deleted', async () => {
-			const frameDeleted = await frameModel.destroy('62cf1fc6498565d94eba52cd');
-			expect(frameDeleted).to.be.deep.equal(frameMockWithId);
+			const frameRemoved = await frameModel.remove('62cf1fc6498565d94eba52cd');
+			expect(frameRemoved).to.be.deep.equal(frameMockWithId);
 		});
 
 		it('_id not found', async () => {
 			try {
-				await frameModel.destroy('123ERRADO');
+				await frameModel.remove('123ERRADO');
 			} catch (error: any) {
 				expect(error.message).to.be.eq('InvalidMongoId');
 			}
