@@ -70,13 +70,13 @@ describe('Lens Model', () => {
 
 	describe('deleting a lens', () => {
 		it('successfully deleted', async () => {
-			const lensDeleted = await lensModel.destroy('62cf1fc6498565d94eba52cd');
+			const lensDeleted = await lensModel.remove('62cf1fc6498565d94eba52cd');
 			expect(lensDeleted).to.be.deep.equal(lensMockWithId);
 		});
 
 		it('_id not found', async () => {
 			try {
-				await lensModel.destroy('123ERRADO');
+				await lensModel.remove('123ERRADO');
 			} catch (error: any) {
 				expect(error.message).to.be.eq('InvalidMongoId');
 			}
