@@ -1,0 +1,15 @@
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/bin/Debug/net6.0/cast-implicito
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/bin/Debug/net6.0/cast-implicito.deps.json
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/bin/Debug/net6.0/cast-implicito.runtimeconfig.json
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/bin/Debug/net6.0/cast-implicito.dll
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/bin/Debug/net6.0/cast-implicito.pdb
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/obj/Debug/net6.0/cast-implicito.csproj.AssemblyReference.cache
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/obj/Debug/net6.0/cast-implicito.GeneratedMSBuildEditorConfig.editorconfig
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/obj/Debug/net6.0/cast-implicito.AssemblyInfoInputs.cache
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/obj/Debug/net6.0/cast-implicito.AssemblyInfo.cs
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/obj/Debug/net6.0/cast-implicito.csproj.CoreCompileInputs.cache
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/obj/Debug/net6.0/cast-implicito.dll
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/obj/Debug/net6.0/refint/cast-implicito.dll
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/obj/Debug/net6.0/cast-implicito.pdb
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/obj/Debug/net6.0/cast-implicito.genruntimeconfig.cache
+/home/leonardo/Documents/trybe/trybe-exercicios/acc-csharp/secao-2-vars-tipos-condicionais-e-loops/fixacao/cast-implicito/obj/Debug/net6.0/ref/cast-implicito.dll
