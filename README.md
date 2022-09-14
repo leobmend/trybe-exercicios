@@ -48,7 +48,13 @@ The course is divided into four modules.
 	- [x] Project: Delivery App;
 	- [x] MasterClass - VPS, CI/CD 
 
-* Module 04 - Computer Science (under construction)
+* Module 04 - Computer Science
+	- [ ] Introduction to Python
+	- [ ] Project Patterns
+	- [ ] Networks and Data Scraping
+	- [ ] Algorithms
+	- [ ] Data Structure I: Arrays, Lists, Queues ans Stacks
+	- [ ] Data Structure II: Hahsmaps and Sets
 
 ## This space
 
