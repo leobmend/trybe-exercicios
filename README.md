@@ -32,7 +32,7 @@ The course is divided into four modules.
 	- [x] API Context and React Hooks;
 	- [x] Project: Recipes App; 
 	
-* Module 03 - Back-end (under construction)
+* Module 03 - Back-end
 	- [x] Docker: Using containers;
 	- [x] Introduction to SQL;
 	- [x] SQL Functions, JOINs and Normalization;
@@ -44,9 +44,9 @@ The course is divided into four modules.
 	- [x] Object-oriented programming (OOP) and SOLID;
 	- [x] Project: TSC - Trybe Soccer Club
 	- [x] Introduction to MongoDB
-	- [ ] MongoDB with Node.js and OOP
-	- [ ] Project: Delivery App;
-	- [ ] MasterClass - VPS, CI/CD 
+	- [x] MongoDB with Node.js and OOP
+	- [x] Project: Delivery App;
+	- [x] MasterClass - VPS, CI/CD 
 
 * Module 04 - Computer Science (under construction)
 
