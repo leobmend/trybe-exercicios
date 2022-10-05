@@ -16,6 +16,7 @@ db = client.catalogue
 documents = [
     {
         "title": "A Light in the Attic",
+        "categories": "Cat"
     },
     {
         "title": "Tipping the Velvet",
